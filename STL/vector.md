@@ -27,7 +27,7 @@ Alternatively, we can write them also in a single line using commas, like this-
 ```
 The size of vector  `v` will be as much element we insert into the vector using `push_back()` function. 
   - `vector < Datatype > MyVector(n);`     where n = size of the vector.<br/>
-Thus we can initially allocate the memory needed for our vector like this. Using this method will give us two extra benefit:
+Thus we can initially allocate the memory needed for our vector like this. This method will give us two extra benefit:
     - This will set the values of all index to 0 automatically.
     - We can now access any index form 0 to size-1 inclusively by <br/>`“MyVector[i]”`; where i = index.<br/>
 But still we can change the size of the vector at any time. Besides, we can also store more than n elements into the vector (if needed). Using `push_back()`, we can add elements from index n to maximum size.
