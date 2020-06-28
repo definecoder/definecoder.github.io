@@ -137,3 +137,12 @@ Elements of the minimum_heap_priority_queue are ::
 8 12 18 
 ```
 Here we changed the argument of the queue printing function to _**`priority_queue < int , vector < int > , greater < int > > temp`**_ To let the function know that it is a minimum heap.
+
+## Functions :
+|    Function   |                     Work of the function                     |
+|:-------------:|:------------------------------------------------------------:|
+|  MyPQ.empty() |     Returns True is MyPQ is empty otherwise returns False    |
+|   MyPQ.top()  | Returns the most prioritized (Topmost) element of the queue  |
+|   MyPQ.pop()  | Removes the most prioritized (Topmost) element of the queue  |
+|  MyPQ.push(x) |                    Pushes x into the heap                    |
+| pq1.swap(pq2) |               Swaps the values from pq1 to pq2               |
