@@ -11,8 +11,8 @@ STL is a very powefull tool for **competitive programming**. It saves a lot of t
 - [Stack](https://definecoder.github.io/STL/stack)
 - Queue
   * Deque
-- Priority Queue
-- Set
+- [Priority Queue](https://definecoder.github.io/STL/PriorityQueue)
+- [Set](https://definecoder.github.io/STL/set)
   * Multiset
   * Unordered Set
   * Unordered Multiset
