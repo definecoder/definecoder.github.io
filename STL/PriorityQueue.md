@@ -55,3 +55,46 @@ You can do the following operation in a priority queue :
   // prints 18 as it is the largest among the heap
   ```
 ***
+## Printing a Priority Queue using a custom function : 
+
+## Set the Minimum Number as priority ( Minimum Number Heap ) 
+Sometimes your priority can be to pop the smallest number first. Which means if you want to keep your data in ascending order you need to declare the priority queue using the following code :
+```cpp
+#include <iostream> 
+#include <queue> 
+  
+using namespace std; 
+
+// Function to print minimum heap priority queue
+void print_spcl_priority_queue(priority_queue < int , vector < int > , greater < int > > MyPQ) 
+{ 
+    priority_queue < int , vector < int > , greater < int > > temp = MyPQ; 
+    cout << "Elements of the priority_queue are :: \n" ;
+    while ( !temp.empty() ) 
+    { 
+        cout << temp.top() << " "; 
+        temp.pop(); 
+    } 
+    cout << '\n'; 
+} 
+
+int main(){
+  priority_queue < int , vector < int > , greater < int > > MySpclPQ; 
+  MySpclPQ.push(12);
+  MySpclPQ.push(18);
+  MySpclPQ.push(8);
+  // After Pushing the queue will be 8 , 12 , 18
+  print_spcl_priority_queue(MySpclPQ);
+  // printing the priority queue
+  MySpclPQ.pop(); // popping 8
+  MySpclPQ.pop(); // popping 12
+  MySpclPQ.pop(); // popping 18
+  // Now the queue will be empty
+  return 0;
+}
+```
+### OUTPUT :
+```
+Elements of the priority_queue are :: 
+8 12 18 
+```
