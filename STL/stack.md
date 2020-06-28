@@ -1,4 +1,4 @@
-# stack
+# STACK
 
 ## Introduction:
 Stack is a type of container adaptor. It is just like a pile of plates kept on top of each other. we can do 2 things with a pile of plates: 
@@ -11,4 +11,10 @@ we can use `#include <stack>` to access all the library functions of stack.
 
 ## Declaration:
 Genaral syntax to declare a stack is : `stack < datatype > MyStack;`.  
-we can use any kind of datatype, stracture, container in a stack. example : `stack < int > MyStack`, `stack < char > MyStack`, `stack < vector < string > > MyStack`.
+we can use any kind of datatype, stracture, container in a stack. Example :
+```cpp
+stack < int > MyStack; 
+stack < char > MyStack;   
+stack < vector < string > > MyStack; 
+```
+
