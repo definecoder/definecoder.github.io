@@ -55,7 +55,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
                 cout << endl;
             ```
         
-- Type-03 - **Initializing like arrays**
+- Type-03 - ***Initializing like arrays***
     - We can do it in 2 different styles
         - Style-A
             
@@ -82,7 +82,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
                 cout << endl;
             ```
         
-- Type-04 - **Initializing from an array**
+- Type-04 - ***Initializing from an array***
     ```cpp
         int arr[] = {10, 20, 30};
         int n = sizeof(arr) / sizeof(arr[0]);
@@ -177,7 +177,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         }
     ```
 
-- We will get a **runtime error** as we are accessing a memory you do not have. The question is why? The answer is quite simple - **"An empty vector does not provide any memory for its elements. When we use `push_back()` function to add new elements, it provides memory for the elements."** But if we want to add some memories to our vector we have to use `resize()` function. The syntax is `VariableName.resize(NewSize)`. **Then we can access indexs form 0 to NewSize-1.**
+- We will get a **runtime error** as we are accessing a memory we do not have. The question is why? The answer is quite simple - **"An empty vector does not provide any memory for its elements. When we use `push_back()` function to add new elements, it provides memory for the elements."** But if we want to add some memories to our vector we have to use `resize()` function. The syntax is `VariableName.resize(NewSize)`. **Then we can access indexs form 0 to NewSize-1.**
 - So we have to use `v.Push_back(10), v.push_back(20), v.push_back(30)` in the first one. We can handle the second one like this:
 
     ```cpp
