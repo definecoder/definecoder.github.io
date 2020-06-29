@@ -57,14 +57,14 @@ You can do the following operation in a priority queue :
 ***
 ## Printing a Priority Queue using a custom function : 
 There are no library function to print a queue without popping. So, we will  write a custom function of oue own to print a priority queue. We will send a copy of our priority queue in order to print it. We can pop that copy because it will not change the main Priority_queue which is inside the main function. So, Lets see the code : 
- ```cpp
- #include <iostream> 
- #include <queue> 
-
- using namespace std; 
-
- void print_priority_queue(priority_queue < int > temp) 
- { 
+  ```cpp
+  #include <iostream> 
+  #include <queue> 
+  
+  using namespace std; 
+  
+  void print_priority_queue(priority_queue < int > temp) 
+  { 
      cout << "Elements of the priority_queue are :: \n" ;
      while ( !temp.empty() ) 
      { 
@@ -72,24 +72,24 @@ There are no library function to print a queue without popping. So, we will  wri
          temp.pop(); 
      } 
      cout << '\n'; 
- } 
+  } 
 
- int main(){
+  int main(){
      priority_queue < int > MyPQ;
-    MyPQ.push(12);
+     MyPQ.push(12);
      MyPQ.push(18);
-    MyPQ.push(8);
-    // After Pushing the queue will be 18, 12, 8
-    print_priority_queue(MyPQ);
-    // printing the priority queue using custom function
-    // Here we are sending a copy of the queue
-    MyPQ.pop(); // popping 18
-    MyPQ.pop(); // popping 12
-    MyPQ.pop(); // popping 8
-    // Now the queue will be empty
-   return 0;
- }
- ``` 
+     MyPQ.push(8);
+     // After Pushing the queue will be 18, 12, 8
+     print_priority_queue(MyPQ);
+     // printing the priority queue using custom function
+     // Here we are sending a copy of the queue
+     MyPQ.pop(); // popping 18
+     MyPQ.pop(); // popping 12
+     MyPQ.pop(); // popping 8
+     // Now the queue will be empty
+     return 0;
+  }
+  ```  
 ### OUTPUT: 
   ```
   Elements of the priority_queue are :: 
@@ -98,12 +98,13 @@ There are no library function to print a queue without popping. So, we will  wri
 
 ## Set the Minimum Number as priority ( Minimum Number Heap ) 
 Sometimes your priority can be to pop the smallest number first. Which means if you want to keep your data in ascending order you need to declare the priority queue using the following code : 
+  
   ```cpp
   #include <iostream> 
   #include <queue> 
-
+  
   using namespace std; 
-
+  
   // Function to print minimum heap priority queue
   void print_spcl_priority_queue(priority_queue < int , vector < int > , greater < int > > temp) 
   { 
