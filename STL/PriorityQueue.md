@@ -20,9 +20,11 @@ This creates a priority queue nammed MyPriorityQueue of a cerrain data type.
 
 ## Operations
 You can do the following operation in a priority queue :
-- push
-- pop
-- top
++ push
++ pop
++ top <br>
+
+Now lets see the implementation
 
 ## Implementation of the operations
 + _**PUSH :**_  This operation takes an input of certain data type and pushes it into your priority queue or heap. It works same as pushing something in a heap. It take logN time    to do this operation. Suppose you want to push 12,  18,  8 into your priority queue.  You can do that using the following code:
