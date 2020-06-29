@@ -107,6 +107,8 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         cout << endl;
     ```
 
+***
+
 ### What operations can we make with an empty vector?
 
 - We can push elements into it using `push_back()` function. The syntax is like `VariableName.push_back(value)`. We can push as much elements as we need (but within the range).
@@ -152,6 +154,8 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         v = {10, 20, 30, 40};
     ```
 
+***
+
 ### Which things should we be aware of after declaring an emtpy vector?
 
 - We cannot add elements without using `push_back()` function.
@@ -164,7 +168,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         v[2] = 30;
     ```
 
-or,
+    or,
 
     ```cpp
         vector < int > v;
@@ -240,6 +244,8 @@ or,
         Output:
         1 2 3 4 5
 
+***
+
 ### What if we want all of the elements of our vector become 0 (for number types) or NULL (for character types) after resize?
 
 - Use `clear()` function before resize. The syntax is `VariableName.clear()`.
@@ -259,3 +265,4 @@ or,
 
 - **`clear()` function deletes all the elements of the vector and the vector becomes empty.**
 
+***
