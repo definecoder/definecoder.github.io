@@ -1,45 +1,275 @@
 # Vector
+
 ## Introduction
+
 Vector is one of the most powerful Data Type in ***C++ programming language*** and very much helpful for competitive programmers. The concept of vector is almost same as C programming language’s ***Array***. However, in C++, we call the vector ***“A Container”***. A container can contain everything such as *<ins>`integers, doubles, characters, bools, strings, structures`</inS>* and a vector can contain *<ins>`some vectors`</ins>* too. But the most important feature of vector is –***“Its memory is allocated dynamically.”*** We can change its length at any time and you can perform many operations that is not possible for C language’s array. We will see and learn all of these things gradually in a proper way.
+
 <br/>
-<br/>
+
+***
+
+### Why should we learn vector?
+- We can change the size of a vector at any time
+- We can delete any element at any time
+- We can insert new elements at any place
+- We can set all the value of all elements to an specific value without using loops
+- We can copy one vector to another without using loops
+- And so many things we can perform using vector which is not possible using traditional array
+
+***
+
 ## Header File
-We have to include an extra header file to use this data type. That is- <br/>
-`#include <vector>`<br/>
-Under this header file, we can access all the library functions that can be used for vector data type.
-<br/>
-<br/>
+
+We have to include an extra header file to use this data type. That is- `#include <vector>`. Under this header file, we can access all the library functions that can be used for vector data type.
+
 ## Declaration and initialization of a vector
-We can declare a vector in several ways. Let us see them one by one and understand their differences gradually.
-  - `vector < Datatype > MyVector;`<br/>
-Using this format, we can declare a vector. Now we can see that the size of the vector is not mentioned here. That means **“we have not allocated any memory for this vector.”** In this case if we want to add any value (of the datatype mentioned inside), we have to use a library function `push_back()`. For example, if we want to store 55, 72, 89 and 100 into an integer vector, we have to perform these:
-```cpp
-    vector < int > v;
-    v.push_back(55);
-    v.push_back(72);
-    v.push_back(89);
-    v.push_back(100);
-```
-Alternatively, we can write them also in a single line using commas, like this-
-```cpp
-    vector < int > v;
-    v.push_back(55), v.push_back(72), v.push_back(89), v.push_back(100);
-```
-The size of vector  `v` will be as much element we insert into the vector using `push_back()` function. 
-  - `vector < Datatype > MyVector(n);`     where n = size of the vector.<br/>
-Thus we can initially allocate the memory needed for our vector like this. This method will give us two extra benefit:
-    - This will set the values of all index to 0 automatically.
-    - We can now access any index form 0 to size-1 inclusively by <br/>`“MyVector[i]”`; where i = index.<br/>
-But still we can change the size of the vector at any time. Besides, we can also store more than n elements into the vector (if needed). Using `push_back()`, we can add elements from index n to maximum size.
 
-Suppose, we are declaring a vector of length 3 and store 3 values into the vector. we have to do it like-
-```cpp
-    vector < int > v(3);
-    v[0] = 29, v[1] = 37, v[2] = 23;
-```
+We can declare a vector in several ways. Let us see some of them at a glance and then move forward.
 
-Now if we want to add more elements, we can do it by simply using `push_back()`. <br/>
-```cpp
-    v.push_back(18), v.push_back(97);
-```
-**Now the size of the vector is increased from three to five**.
+- Type-01 - ***Creating an empty Vector***
+
+    ```c++
+        vector < int > v;
+    ```
+        
+- Type-02 - ***Specifying size and initializing all values***
+    - there are two criterias
+        - 1
+            ```cpp
+                int n = 7;
+                vector < int > v(n);
+                
+                // Print the vector just to be made sure
+                cout << "v = ";
+                for(int x : v) {
+                    cout << x << " ";
+                }
+                cout << endl;
+            ```
+    
+            - This sets all elements to 0 automatically.
+            
+        - 2
+        
+            ```cpp
+                int n = 7;
+                vector < int > v(n, 10);   //The 7 elements of the vector is now 10
+        
+                // Print the vector just to be made sure
+                cout << "v = ";
+                for(int x : v)
+                    cout << x << " ";
+                cout << endl;
+            ```
+        
+- Type-03 - ***Initializing like arrays***
+    - We can do it in 2 different styles
+        - Style-A
+            
+            ```cpp
+                vector < char > v {'d', 'e', 'f', 'i', 'n', 'e', 'c', 'o', 'd', 'e', 'r'};
+        
+                // Print the vector just to be made sure
+                cout << "v = ";
+                for(char x : v) {
+                    cout << x;
+                }
+                cout << endl;
+            ```
+            
+        - Style-B - We can use an equal sign too
+            
+            ```cpp
+                vector < double > v = {'d', 'e', 'f', 'i', 'n', 'e', 'c', 'o', 'd', 'e', 'r'};
+        
+                // Print the vector just to be made sure
+                cout << "v = ";
+                for(char x : v)
+                    cout << x;
+                cout << endl;
+            ```
+        
+- Type-04 - ***Initializing from an array***
+    ```cpp
+        int arr[] = {10, 20, 30};
+        int n = sizeof(arr) / sizeof(arr[0]);
+        vector < int > v(arr, arr + n);
+        
+        // Print the vector just to be made sure
+        cout << "v = ";
+        for(int x : v)
+            cout << x << " ";
+        cout << endl;
+    ```
+        
+- Type-05 - ***Initializing from another vector***
+    ```cpp
+        vector < int > motherVector {8, 4, 2, 0, 1};
+        vector < int > v(motherVector.begin(), motherVector.end());
+        
+        // Print the vector just to be made sure
+        cout << "v = ";
+        for(int x : v)
+            cout << x << " ";
+        cout << endl;
+    ```
+
+***
+
+### What operations can we make with an empty vector?
+
+- We can push elements into it using `push_back()` function. The syntax is like `VariableName.push_back(value)`. We can push as much elements as we need (but within the range).
+
+    ```cpp
+        vector < char > v, v.push_back('d'), v.push_back('e'), v.push_back('f');
+        v.push_back('i'), v.push_back('n'), v.push_back('e');
+        //And so on...
+    
+        // Print the vector just to be made sure
+        cout << "v = ";
+        for(char x : v) {
+            cout << x;
+        }
+        cout << endl;
+    ```
+
+- The most important thing, when we declare an empty vector, is to have in mind that after declaration, the size of the vector is 0. Then when we push elements one by one, the size of the vector gradually increases. For example, in the previous code - **`"after initialization, the size was 0. Then we pushed 6 elements into the vector. Now The size of the vector is 6."`**
+
+- We can check the size of the vector at any time using `size()` function. The syntax is `VariableName.size()`. Compile and run the following code to make it clear.
+
+    ```cpp
+        vector < double > v;
+        cout << "After initialization, size = " << v.size() << endl;
+        v.push_back(10.5);
+        cout << "After adding first element, size = " << v.size() << endl;
+        v.push_back(13.684);
+        cout << "After adding one more element, size = " << v.size() << endl;
+        v.push_back(18.12345);
+        cout << "After adding one more element, size = " << v.size() << endl;
+    ```
+
+        Output:
+        After initialization, size = 0
+        After adding first element, size = 1
+        After adding one more element, size = 2
+        After adding one more element, size = 3
+
+- We can also assign values to the vector after declaration as shown below.
+
+    ```cpp
+        vector < int > v;
+        v = {10, 20, 30, 40};
+    ```
+
+***
+
+### Which things should we be aware of after declaring an emtpy vector?
+
+- We cannot add elements without using `push_back()` function.
+- We cannot just make the following operations:
+
+    ```cpp
+        vector < int > v;
+        v[0] = 10;
+        v[1] = 20;
+        v[2] = 30;
+    ```
+
+    or,
+
+    ```cpp
+        vector < int > v;
+        for(int i = 0; i < 10; i++) {
+            cin >> v[i];
+        }
+    ```
+
+- We will get a **runtime error** as we are accessing a memory we do not have. The question is why? The answer is quite simple - **"An empty vector does not provide any memory for its elements. When we use `push_back()` function to add new elements, it provides memory for the elements."** But if we want to add some memories to our vector we have to use `resize()` function. The syntax is `VariableName.resize(NewSize)`. **Then we can access indexs form 0 to NewSize-1.**
+- So we have to use `v.Push_back(10), v.push_back(20), v.push_back(30)` in the first one. We can handle the second one like this:
+
+    ```cpp
+        vector < int > v;
+        for(int i = 0; i < 10; i++) {
+            int x;
+            cin >> x;
+            v.push_back(x);
+        }
+    ```
+
+- Or we can use resize the vector and access indexs from 0 to NewSize-1.
+
+    ```cpp
+        vector < int > v;
+        v.resize(10);
+        for(int i = 0; i < 10; i++) {
+            cin >> v[i];
+        }
+    ```
+
+- Suppose, we have declared an empty vector and then pushed 5 elements into it. After those pushing, we can change any of those value using `VariableName[index] = value`. See the following code:
+
+    ```cpp
+        vector < int > v;
+        v.push_back(10), v.push_back(11), v.push_back(12), v.push_back(13), v.push_back(14);
+        v[0] = 100;
+        v[1] = 200;
+        v[2] = 300, v[3] = 400, v[4] = 500;
+    ```
+
+- So, the lesson is **"We cannot access an index that has no allocation in the memory."**
+
+***
+
+### What happens when we use `resize()` function?
+
+- Suppose we have a vector of size 5. Now we use `resize()` function to change the size of the vector to 10. After this operation, the first elements of our vector remains the same as it was before. Besides, we get (10 - 5 =) 5 extra indexes to access. Initially these new 5 indexes will contain 0 for an integer vector! Run the code:
+
+    ```cpp
+        vector < int > v{1, 2, 3, 4, 5};
+        v.resize(10);
+        for(int x : v){
+            cout << x << " ";
+        }
+        cout << endl;
+    ```
+
+        Output:
+        1 2 3 4 5 0 0 0 0 0
+
+- The big question in our mind is **What happens after resize, if the data type is not integer!** The answer is **If the datatype is `int`, `double`, `long int` or number related anything, the value is automatically set to 0. And if the data type is `char` or `string` related something, each index will contain a `NULL` character!**
+
+- Now suppose, we have a vector of length 7. We resize if to length 5. Then these 5 elements remains the same. Just those last elements gets deleted.
+
+    ```cpp
+        vector < int > v{1, 2, 3, 4, 5, 6, 7};
+        v.resize(5);
+        for(int x : v){
+            cout << x << " ";
+        }
+        cout << endl;
+    ```
+        Output:
+        1 2 3 4 5
+
+***
+
+### What if we want all of the elements of our vector become 0 (for number types) or NULL (for character types) after resize?
+
+- Use `clear()` function before resize. The syntax is `VariableName.clear()`.
+
+    ```cpp
+        vector < int > v{1, 2, 3, 4, 5, 6, 7};
+        v.clear();
+        v.resize(10);
+        for(int x : v){
+            cout << x << " ";
+        }
+        cout << endl;
+    ```
+
+        Output:
+        0 0 0 0 0 0 0 0 0 0
+
+- **`clear()` function deletes all the elements of the vector and the vector becomes empty.**
+
+***
