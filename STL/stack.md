@@ -25,7 +25,8 @@ There are mainly four functions  which are hugely used in stack. They are:
  - pop()
  - top()
  - empty()
-##### push():
+ 
+#### push():
 push() function is used to input a data in the stack. This function always adds a new data on the top of the container and increases the size of the stack by one. Example:
 ```cpp
     stack < int > MyStack;
@@ -35,7 +36,7 @@ push() function is used to input a data in the stack. This function always adds 
 ```
 In this code, we have inputed some data in "MyStack". After pushing some datas the stack will be {5, 15, 63}. As '63' is the last data we have inserted, so it is on the top of the stack. 
 
-##### pop():
+#### pop():
 pop() is the opposite of the push() function. It removes the last data inserted in the stack. It decreases the size of the stack by one.The items are popped in the reversed order in which they are pushed.
 ```cpp
     stack < int > MyStack;
@@ -74,7 +75,7 @@ empty() function is used to check if the stack container is empty or not. If the
 ```
 `OUTPUT : FILLED`
 
-In this code we gave a input in MyStack, so the empty() function returned 1. As a result we got "FILLED" as an output.
+In this code we gave an input in MyStack, so the empty() function returned 1. As a result we got "FILLED" as an output.
 
 Let's see another code:
 ```cpp
@@ -82,10 +83,10 @@ Let's see another code:
     MyStack.push(5);
     MyStack.push(15);
     MyStack.push(63);
-                                        //the stack is {5, 15, 63} now
-    while(MyStack.empty() != 1){        //the loop runs untill empty() function returns 1
-        cout << MyStack.top() <<" ";    //prints the last element of the stack
-        MyStack.pop();                  //decreasing the size of the stack by removing the last element
+                                      //the stack is {5, 15, 63} now
+    while(MyStack.empty() != 1){      //the loop runs untill empty() function returns 1
+        cout << MyStack.top() <<" ";  //prints the last element of the stack
+        MyStack.pop();                //decreasing the size of the stack by removing the last element
     }
 ```
 `OUTPUT : 5     15    63`
@@ -110,6 +111,6 @@ So these were the basic concepts of stack. We must need to solve stack related p
 
 - [*UVA 514*](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=455)
 - [*UVA 1062*](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3503)
-- [*Codeforces 5C*](https://codeforces.com/contest/5/status)
+- [*Codeforces 5C*](https://codeforces.com/contest/5/problem/C)
 
 Happy coding<3
