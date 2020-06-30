@@ -300,3 +300,25 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 - **`clear()` function deletes all the elements of the vector and the vector becomes empty. And when we resize an empty vector, all indexes will contain 0 (or NULL) by default.**
 
 ***
+
+- The last 4 questions explains how we are going to insert new elements to our vector under different circumstances. Now we will see a list of some functions along with a short description.
+
+***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
