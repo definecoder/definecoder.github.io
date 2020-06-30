@@ -143,7 +143,8 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 - We can push elements into it using `push_back()` function. The syntax is like `VariableName.push_back(value)`. We can push as much elements as we need (but within the range).
 
     ```cpp
-        vector < char > v, v.push_back('d'), v.push_back('e'), v.push_back('f');
+        vector < char > v;
+        v.push_back('d'), v.push_back('e'), v.push_back('f');
         v.push_back('i'), v.push_back('n'), v.push_back('e');
         //And so on...
     
