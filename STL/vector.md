@@ -305,8 +305,30 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 
 ***
 
+### Important Iterator Functions
 
+| Function     |                                                   Work of the function                                                  |
+|--------------|:------------------------------------------------------------------------------------------------------------------------|
+| **begin()**  | Returns an iterator pointing to the first vector                                                                        |
+| **end()**    | Returns an iterator pointing to the theoretical element that follows the last element in a vector                       |
+| **rbegin()** | Returns a reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first. |
+| **rend()**   | Returns a reverse iterator pointing to the first element in the vector (reverse end).                                   |
 
+***
+
+### Important Capacity Functions
+
+|       Function      |                                         Work of the function                                        |
+|:--------------------|:----------------------------------------------------------------------------------------------------|
+| **size()**          | Returns the number of elements in the vector                                                        |
+| **max_size()**      | Returns the maximum number of elements that the vetor can hold                                      |
+| **capacity()**      | Returns the size of the storage space currently allocated to the vector expressed as number         |
+| **resize(n)**       | Resizes the container so that it can contain `'n'` elements                                         |
+| **empty()**         | Returns whether the container is empty                                                              |
+| **shrink_to_fit()** | Reduces the capacity of the container to fit its size and destroys all elements beyond the capacity |
+| **reserve(n)**      | Requests that the vector capacity be at least enough to contain `'n'` elements                      |
+
+***
 
 
 
