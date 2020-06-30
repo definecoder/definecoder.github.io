@@ -85,4 +85,7 @@ int main()
 
 Now that you can make pairs so start solving some problems using pairs!
 
+**problem links:**
+1. [geeksforgeeks](https://practice.geeksforgeeks.org/problems/c-stl-set-2-pair/1)
+
 
