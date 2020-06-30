@@ -211,7 +211,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         }
     ```
 
-- We will get a **runtime error** as we are accessing a memory we do not have. The question is why? The answer is quite simple - **"An empty vector does not provide any memory for its elements. When we use `push_back()` function to add new elements, it provides memory for the elements."** But if we want to add some memories to our vector we have to use `resize()` function. The syntax is `VariableName.resize(NewSize)`. **Then we can access indexs form 0 to NewSize-1.**
+- We will get a **runtime error** as we are accessing a memory that we do not have. The question is why? The answer is quite simple - **"An empty vector does not provide any memory for its elements. When we use `push_back()` function to add new elements, it provides memory for the elements."** But if we want to add memories for some elements to our vector, we have to use `resize()` function. The syntax is `VariableName.resize(NewSize)`. **Then we can access indexs form 0 to NewSize - 1.**
 - So we have to use `v.Push_back(10), v.push_back(20), v.push_back(30)` in the first one. We can handle the second one like this:
 
     ```cpp
@@ -223,7 +223,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         }
     ```
 
-- Or we can use resize the vector and access indexs from 0 to NewSize-1.
+- Or we can use resize the vector and access indexs from 0 to NewSize - 1.
 
     ```cpp
         vector < int > v;
@@ -263,9 +263,9 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         Output:
         1 2 3 4 5 0 0 0 0 0
 
-- The big question in our mind is **What happens after resize, if the data type is not integer!** The answer is **If the datatype is `int`, `double`, `long int` or number related anything, the value is automatically set to 0. And if the data type is `char` or `string` related something, each index will contain a `NULL` character!**
+- The big question in our mind is **What happens after resize if the data type is not integer!** The answer is **If the datatype is `int`, `double`, `long int` or number related anything, the value is automatically set to 0. And if the data type is `char` or `string` related something, each index will contain a `NULL` character!**
 
-- Now suppose, we have a vector of length 7. We resize if to length 5. Then these 5 elements remains the same. Just those last elements gets deleted.
+- Now suppose, we have a vector of length 7. We resize if to length 5. Then these 5 elements remains the same. Just those last elements get deleted.
 
     ```cpp
         vector < int > v{1, 2, 3, 4, 5, 6, 7};
@@ -282,7 +282,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 
 ### What if we want all of the elements of our vector become 0 (for number types) or NULL (for character types) after resize?
 
-- Use `clear()` function before resize. The syntax is `VariableName.clear()`.
+- Use `clear()` function before resize. The syntax of `clear()` function is `VariableName.clear()`.
 
     ```cpp
         vector < int > v{1, 2, 3, 4, 5, 6, 7};
@@ -297,6 +297,6 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         Output:
         0 0 0 0 0 0 0 0 0 0
 
-- **`clear()` function deletes all the elements of the vector and the vector becomes empty.**
+- **`clear()` function deletes all the elements of the vector and the vector becomes empty. And when we resize an empty vector, all indexes will contain 0 (or NULL) by default.**
 
 ***
