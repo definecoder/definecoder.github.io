@@ -83,6 +83,16 @@ int main()
 ```
 **We could also sort the vectors of pairs in the increasing order of id or or name by using customized sort functions, which will be shown in the sorting part of STL**
 
+## Pair functions:
+| Function | work of function |
+|-----|-----|
+|**make_pair(value1, value2)**| Assigns value in pair|
+|**pair1.swap(pair2)** | This function swaps the contents of one pair object with the contents of another pair object. The pairs must be of same type.|
+
+
 Now that you can make pairs so start solving some problems using pairs!
+<br>
+**problem links:**
+1. [geeksforgeeks](https://practice.geeksforgeeks.org/problems/c-stl-set-2-pair/1)
 
 
