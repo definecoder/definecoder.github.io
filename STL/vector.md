@@ -308,7 +308,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 ### Important Iterator Functions
 
 | Function     |                                                   Work of the function                                                  |
-|--------------|:------------------------------------------------------------------------------------------------------------------------|
+|--------------|-------------------------------------------------------------------------------------------------------------------------|
 | **begin()**  | Returns an iterator pointing to the first element of the vector                                                         |
 | **end()**    | Returns an iterator pointing to the theoretical element that follows the last element in a vector                       |
 | **rbegin()** | Returns a reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first. |
@@ -319,7 +319,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 ### Important Capacity Functions
 
 |       Function      |                                         Work of the function                                        |
-|:--------------------|:----------------------------------------------------------------------------------------------------|
+|---------------------|-----------------------------------------------------------------------------------------------------|
 | **size()**          | Returns the number of elements in the vector                                                        |
 | **max_size()**      | Returns the maximum number of elements that the vetor can hold                                      |
 | **capacity()**      | Returns the size of the storage space currently allocated to the vector expressed as number         |
@@ -333,15 +333,28 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 ### Element Access Functions
 
 |          Function          |                                          Work of the function                                          |
-|:---------------------------|:-------------------------------------------------------------------------------------------------------|
+|----------------------------|--------------------------------------------------------------------------------------------------------|
 | **reference operator [g]** | Returns a reference to the element at position `'g'` in the vector                                     |
 | **at()**                   | Returns a reference to the element at position `'g'` in the vector                                     |
 | **front()**                | Returns a reference to the first element in the vector                                                 |
 | **beck()**                 | Returns a reference to the last element of the vector                                                  |
 | **data()**                 | Returns a direct pointer to the memory array used internally by the vector to store its owned elements |
 
+***
 
+### Modifiers
 
+| Function        | Work of the function                                                                           |
+|-----------------|------------------------------------------------------------------------------------------------|
+| **assign()**    | It assigns new value to the vector elements by replacing old ones                              |
+| **push_back()** | It pushes the elements into the vector form the back                                           |
+| **pop_back()**  | It removes elements from a vector from the back                                                |
+| **insert()**    | It inserts new elements before the element at specified position                               |
+| **erase()**     | It removes elements from the specified position or specified range                             |
+| **swap()**      | It is used to swap the content of one vector with another vector of same type, size may differ |
+| **clear()**     | It is used to remove all the elements of the vector container                                  |
+
+***
 
 
 
