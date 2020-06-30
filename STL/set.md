@@ -47,12 +47,53 @@ The often used operations in set are :
        	MySet.insert(11); // Inserting 11
        	MySet.insert(45); 
        	// 45 is already in the set so nothing happens
-    
+        // So, Now the set should be : 11 , 23 , 45
+        
       	return 0;
     }
     ```
+    Here you can see when we tried to insert 45 for the second time it was not inserted into the set. You can also insert variables which are taken from the user.   
 2. **ITERATOR :**  
-3. **PRINTING A SET :** 
+3. **PRINTING A SET :** Printing of a set can be done in two ways. First one is using iterator and the second one is using C++11 short cut feature. We will include both here. Lets see: 
+    - _**Using Iterator**_ : As you know iterator is a poiunter for the STL datatype or containers, It is very useful to access the elements in a set. First of all you need to declare an iterator of the type of the set that you want to work with.  Then you have to iterate through the set using that iterator that you declared. Lest see the code for better understanding.
+    ```cpp
+    #include <iostream> 
+    #include <set> 
+    
+    using namespace std; 
+    
+    int main(){
+    
+        set < int > MySet; // Declaring MySet
+        set < int >::iterator it; 
+        // Declaring an iterator to point to the elements of MySet
+    
+        MySet.insert(45); // Inserting 45
+        MySet.insert(23); // Inserting 23
+        MySet.insert(11); // Inserting 11
+        MySet.insert(45); 
+        // 45 is already in the set so nothing happens
+        // So, Now the set should be : 11 , 23 , 45
+    
+        cout << "The Elements of the set are : " << endl;
+    
+        for( it=MySet.begin() ; it != MySet.end() ; it++ )
+        {
+            // Dereferencing the pointer( Iterator ) to see the value
+            cout << *it << " ";
+        } 
+    
+        cout << endl ;
+    
+        return 0;
+    }
+    ```
+    **OUTPUT :**
+    ```
+    The Elements of the set are : 
+    11 23 45 
+    ```
+    - _**Special Format of C++11**_ :
 4. **ERASE :**
 5. **SIZE :**
 6. **FIND AND COUNT :**
