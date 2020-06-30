@@ -37,6 +37,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
                 int n = 7;
                 vector < int > v(n);
                 
+                // This sets all elements to 0 automatically
                 // Print the vector just to be made sure
                 cout << "v = ";
                 for(int x : v) {
