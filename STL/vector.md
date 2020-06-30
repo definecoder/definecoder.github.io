@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Vector is one of the most powerful Data Type in ***C++ programming language*** and very much helpful for competitive programmers. The concept of vector is almost same as C programming language’s ***Array***. However, in C++, we call the vector ***“A Container”***. As a container, a vector can contain everything such as *<ins>`integers, doubles, characters, bools, strings, structures`</inS>* and a vector can contain *<ins>`some vectors`</ins>* too. But the most important feature of vector is –***“Its memory is allocated dynamically.”*** We can change its length at any time and you can perform many operations that is not possible for C language’s array. We will see and learn all of these things gradually in a proper way.
+Vector is one of the most powerful Data Type in ***C++ programming language*** and very much helpful for competitive programmers. The concept of vector is almost same as C programming language’s ***Array***. However, in C++, we call the vector ***“A Container”***. As a container, a vector can contain everything such as *<ins>`integers, doubles, characters, bools, strings, structures`</inS>* and a vector can contain *<ins>`some vectors`</ins>* too. But the most important feature of vector is –***“Its memory is allocated dynamically.”***  We can change its length at any time and you can perform many operations that is not possible for C language’s array. We will see and learn all of these things gradually in a proper way.
 
 ***
 
