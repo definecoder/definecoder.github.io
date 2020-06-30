@@ -31,7 +31,7 @@ You can also check which string is lexicographically greater using **` strA > st
 ## String Functions :
 
 |         Function        |                              Work of the function                              |
-|:-----------------------:|:------------------------------------------------------------------------------:|
+|-------------------------|--------------------------------------------------------------------------------|
 |     MyString.size()     |                         Returns The size of the string                         |
 |     str1.swap(str2)     |                        Swaps the value of str1 and str2                        |
 |   MyString.insert(x,s)  |                     Inserts s in the xth index of MyString                     |
