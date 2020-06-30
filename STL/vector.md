@@ -300,3 +300,55 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 - **`clear()` function deletes all the elements of the vector and the vector becomes empty. And when we resize an empty vector, all indexes will contain 0 (or NULL) by default.**
 
 ***
+
+- The last 4 questions explains how we are going to insert new elements to our vector under different circumstances. Now we will see a list of some functions along with a short description.
+
+***
+
+### Important Iterator Functions
+
+| Function     |                                                   Work of the function                                                  |
+|--------------|:------------------------------------------------------------------------------------------------------------------------|
+| **begin()**  | Returns an iterator pointing to the first element of the vector                                                         |
+| **end()**    | Returns an iterator pointing to the theoretical element that follows the last element in a vector                       |
+| **rbegin()** | Returns a reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first. |
+| **rend()**   | Returns a reverse iterator pointing to the first element in the vector (reverse end).                                   |
+
+***
+
+### Important Capacity Functions
+
+|       Function      |                                         Work of the function                                        |
+|:--------------------|:----------------------------------------------------------------------------------------------------|
+| **size()**          | Returns the number of elements in the vector                                                        |
+| **max_size()**      | Returns the maximum number of elements that the vetor can hold                                      |
+| **capacity()**      | Returns the size of the storage space currently allocated to the vector expressed as number         |
+| **resize(n)**       | Resizes the container so that it can contain `'n'` elements                                         |
+| **empty()**         | Returns whether the container is empty                                                              |
+| **shrink_to_fit()** | Reduces the capacity of the container to fit its size and destroys all elements beyond the capacity |
+| **reserve(n)**      | Requests that the vector capacity be at least enough to contain `'n'` elements                      |
+
+***
+
+### Element Access Functions
+
+|          Function          |                                          Work of the function                                          |
+|:---------------------------|:-------------------------------------------------------------------------------------------------------|
+| **reference operator [g]** | Returns a reference to the element at position `'g'` in the vector                                     |
+| **at()**                   | Returns a reference to the element at position `'g'` in the vector                                     |
+| **front()**                | Returns a reference to the first element in the vector                                                 |
+| **beck()**                 | Returns a reference to the last element of the vector                                                  |
+| **data()**                 | Returns a direct pointer to the memory array used internally by the vector to store its owned elements |
+
+
+
+
+
+
+
+
+
+
+
+
+
