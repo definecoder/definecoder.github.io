@@ -301,7 +301,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 
 ***
 
-- The last 4 questions explains how we are going to insert new elements to our vector under different circumstances. Now we will see a list of some functions along with a short description.
+## The last 4 questions explains how we are going to insert new elements to our vector under different circumstances. Now we will see a list of some functions along with a short description.
 
 ***
 
