@@ -131,8 +131,45 @@ The often used operations in set are :
     11 23 45 
     ```
     I prefer to use this format because it is simple and easy to use. **BUT REMEMBER THIS CAN ONLY BE USED IN C++11 OR HIGHER VERSION OF CPP** .
-4. **ERASE :**
-5. **SIZE :**
-6. **FIND AND COUNT :**
-7. **SWAP :**
+4. **FIND :**
+5. **ERASE :** This function is used to erase one perticuler element or some elements in a range in the set. So, There are **3** types of the erase function. I am includeing the codes for the **C++11**. [To see the codes for C++98 click on this link.](http://www.cplusplus.com/reference/set/set/erase/). Lets continue with the codes for C++11 and above :
+    - **Using constant value :** You can erase a constant value from the set using **`erase (const value_type& val);`** See the code below for better understanding : 
+    ```cpp
+    #include <iostream> 
+    #include <set> 
+    
+    using namespace std; 
+    
+    int main(){
+    
+        set < int > MySet; // Declaring MySet
+    
+        MySet.insert(45); // Inserting 45
+        MySet.insert(23); // Inserting 23
+        MySet.insert(11); // Inserting 11
+        MySet.insert(45); 
+        // 45 is already in the set so nothing happens
+        // So, Now the set should be : 11 , 23 , 45
+    
+        MySet.erase(23); // This will erase 23 from the set
+    
+        cout << "The Elements of the set are : " << endl;
+    
+        for( auto an_element : MySet ) // Taking elements from MySet to an_element ome by one
+        {
+            // Here an_element is a member of MySet
+            cout << an_element << " ";
+        } 
+    
+        cout << endl ;
+    
+        return 0;
+    }
+    ```
+    This is how you can erase a constant value from the set.
+    - using iterator
+    - Erasing a range of number by iterator
+6. **SIZE :**
+7. **FIND AND COUNT :**
+8. **SWAP :**
 8. **UPPER AND LOWER :** 
