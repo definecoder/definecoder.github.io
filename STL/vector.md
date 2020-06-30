@@ -37,6 +37,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
                 int n = 7;
                 vector < int > v(n);
                 
+                // This sets all elements to 0 automatically
                 // Print the vector just to be made sure
                 cout << "v = ";
                 for(int x : v) {
@@ -44,6 +45,9 @@ We can declare a vector in several ways. Let us see some of them at a glance and
                 }
                 cout << endl;
             ```
+            
+                Output:
+                0 0 0 0 0 0 0
     
             - This sets all elements to 0 automatically.
             
@@ -59,7 +63,11 @@ We can declare a vector in several ways. Let us see some of them at a glance and
                     cout << x << " ";
                 cout << endl;
             ```
-        
+            
+                Output:
+                10 10 10 10 10 10 10
+
+
 - Type-03 - ***Initializing like arrays***
     - We can do it in 2 different styles
         - Style-A
@@ -75,6 +83,10 @@ We can declare a vector in several ways. Let us see some of them at a glance and
                 cout << endl;
             ```
             
+                Output:
+                definecoder
+
+
         - Style-B - We can use an equal sign too
             
             ```cpp
@@ -86,7 +98,11 @@ We can declare a vector in several ways. Let us see some of them at a glance and
                     cout << x;
                 cout << endl;
             ```
-        
+            
+                Output:
+                definecoder
+
+
 - Type-04 - ***Initializing from an array***
     ```cpp
         int arr[] = {10, 20, 30};
@@ -99,7 +115,11 @@ We can declare a vector in several ways. Let us see some of them at a glance and
             cout << x << " ";
         cout << endl;
     ```
-        
+    
+        Output:
+        10 20 30
+
+
 - Type-05 - ***Initializing from another vector***
     ```cpp
         vector < int > motherVector {8, 4, 2, 0, 1};
@@ -111,6 +131,10 @@ We can declare a vector in several ways. Let us see some of them at a glance and
             cout << x << " ";
         cout << endl;
     ```
+    
+        Output:
+        8 4 2 0 1
+
 
 ***
 
@@ -130,6 +154,10 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         }
         cout << endl;
     ```
+    
+        Output:
+        define
+
 
 - The most important thing, when we declare an empty vector, is to have in mind that after declaration, the size of the vector is 0. Then when we push elements one by one, the size of the vector gradually increases. For example, in the previous code - **`"after initialization, the size was 0. Then we pushed 6 elements into the vector. Now The size of the vector is 6."`**
 
