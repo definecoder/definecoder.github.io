@@ -166,6 +166,11 @@ The often used operations in set are :
         return 0;
     }
     ```
+    **OUTPUT :**
+    ```
+    The Elements of the set are : 
+    11 45 
+    ```
     This is how you can erase a constant value from the set.
     - using iterator
     - Erasing a range of number by iterator
