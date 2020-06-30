@@ -30,16 +30,19 @@ You can also check which string is lexicographically greater using **` strA > st
 
 ## String Functions :
 
-|         Function        |                              Work of the function                              |
-|-------------------------|--------------------------------------------------------------------------------|
-|     MyString.size()     |                         Returns The size of the string                         |
-|     str1.swap(str2)     |                        Swaps the value of str1 and str2                        |
-|   MyString.insert(x,s)  |                     Inserts s in the xth index of MyString                     |
-|     MySrting.find(s)    | returns initial index of first occurrence of the s in MyString else returns -1 |
-|    MySrting.rfind(s)    |  returns initial index of last occurrence of the s in MyString else returns -1 |
-| MyString.replace(i,j,s) |       Replaces j characters from ith index of MyString with new string s       |
-|      stoi(MyString)     |                 Returns the integer converted form of MyString                 |
-|   MyString.substr(i,k)  |            Returns a substing of length k from ith index of MyString           |
-|    MyString.erase(i)    |           Erases every element from ith index to the end of MyString           |
-|     MyString.clear()    |                        Erases every element in MyStirng                        |
-|     MyString.empty()    |              Returns True if  MyString is empty else return false              |
+| Function                    | Work of the function                                                           |
+|-----------------------------|--------------------------------------------------------------------------------|
+| **MyString.size()**         | Returns The size of the string                                                 |
+| **str1.swap(str2)**         | Swaps the value of str1 and str2                                               |
+| **MyString.insert(x,s)**    | Inserts s in the xth index of MyString                                         |
+| **MySrting.find(s)**        | Returns initial index of first occurrence of the s in MyString else returns -1 |
+| **MySrting.rfind(s)**       | Returns initial index of last occurrence of the s in MyString else returns -1  |
+| **MyString.replace(i,j,s)** | Replaces j characters from ith index of MyString with new string s             |
+| **stoi(MyString)**          | Returns the integer converted form of MyString                                 |
+| **MyString.substr(i,k)**    | Returns a substing of length k from ith index of MyString                      |
+| **MyString.erase(i)**       | Erases every element from ith index to the end of MyString                     |
+| **MyString.clear()**        | Erases every element in MyStirng                                               |
+| **MyString.empty()**        | Returns True if  MyString is empty else return false                           |
+
+***
+
