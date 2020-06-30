@@ -166,7 +166,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 
     ```cpp
         vector < double > v;
-        cout << "After initialization, size = " << v.size() << endl;
+        cout << "After declaration, size = " << v.size() << endl;
         v.push_back(10.5);
         cout << "After adding first element, size = " << v.size() << endl;
         v.push_back(13.684);
@@ -176,7 +176,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
     ```
 
         Output:
-        After initialization, size = 0
+        After declaration, size = 0
         After adding first element, size = 1
         After adding one more element, size = 2
         After adding one more element, size = 3
