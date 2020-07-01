@@ -324,7 +324,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 | **max_size()**  <br>  `v.max_size()`           | Returns the maximum number of elements that the vetor can hold                                      |
 | **capacity()**  <br>  `v.capacity`             | Returns the size of the storage space currently allocated to the vector expressed as number         |
 | **resize()**  <br>  `v.resize(n)`              | Resizes the container so that it can contain `'n'` elements                                         |
-| **empty()**  <br>  v.empty()                   | Returns whether the container is empty                                                              |
+| **empty()**  <br>  `v.empty()`                 | Returns whether the container is empty                                                              |
 | **shrink_to_fit()**  <br>  `v.shrink_to_fit()` | Reduces the capacity of the container to fit its size and destroys all elements beyond the capacity |
 | **reserve()**  <br>  `v.reserve(n)`            | Requests that the vector capacity be at least enough to contain `'n'` elements                      |
 
