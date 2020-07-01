@@ -318,41 +318,41 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 
 ### Important Capacity Functions
 
-|       Function      |                                         Work of the function                                        |
-|---------------------|-----------------------------------------------------------------------------------------------------|
-| **size()**          | Returns the number of elements in the vector                                                        |
-| **max_size()**      | Returns the maximum number of elements that the vetor can hold                                      |
-| **capacity()**      | Returns the size of the storage space currently allocated to the vector expressed as number         |
-| **resize(n)**       | Resizes the container so that it can contain `'n'` elements                                         |
-| **empty()**         | Returns whether the container is empty                                                              |
-| **shrink_to_fit()** | Reduces the capacity of the container to fit its size and destroys all elements beyond the capacity |
-| **reserve(n)**      | Requests that the vector capacity be at least enough to contain `'n'` elements                      |
+| Function                                       | Work of the function                                                                                |
+|------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| **size()**  <br>  `v.size()`                   | Returns the number of elements in the vector                                                        |
+| **max_size()**  <br>  `v.max_size()`           | Returns the maximum number of elements that the vetor can hold                                      |
+| **capacity()**  <br>  `v.capacity`             | Returns the size of the storage space currently allocated to the vector expressed as number         |
+| **resize()**  <br>  `v.resize(n)`              | Resizes the container so that it can contain `'n'` elements                                         |
+| **empty()**  <br>  v.empty()                   | Returns whether the container is empty                                                              |
+| **shrink_to_fit()**  <br>  `v.shrink_to_fit()` | Reduces the capacity of the container to fit its size and destroys all elements beyond the capacity |
+| **reserve()**  <br>  `v.reserve(n)`            | Requests that the vector capacity be at least enough to contain `'n'` elements                      |
 
 ***
 
 ### Element Access Functions
 
-|          Function          |                                          Work of the function                                          |
-|----------------------------|--------------------------------------------------------------------------------------------------------|
-| **reference operator [g]** | Returns a reference to the element at position `'g'` in the vector                                     |
-| **at()**                   | Returns a reference to the element at position `'g'` in the vector                                     |
-| **front()**                | Returns a reference to the first element in the vector                                                 |
-| **beck()**                 | Returns a reference to the last element of the vector                                                  |
-| **data()**                 | Returns a direct pointer to the memory array used internally by the vector to store its owned elements |
+| Function                                 | Work of the function                                                                                   |
+|------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| **reference operator [g]**  <br>  `v[g]` | Returns a reference to the element at position `'g'` in the vector                                     |
+| **at(g)**  <br>  `v.at(g)`               | Returns a reference to the element at position `'g'` in the vector                                     |
+| **front()**  <br>  `v.front()`           | Returns a reference to the first element in the vector                                                 |
+| **back()**  <br>  `v.back()`             | Returns a reference to the last element of the vector                                                  |
+| **data()**  <br>  `v.data()`             | Returns a direct pointer to the memory array used internally by the vector to store its owned elements |
 
 ***
 
 ### Modifiers
 
-| Function        | Work of the function                                                                           |
-|-----------------|------------------------------------------------------------------------------------------------|
-| **assign()**    | It assigns new value to the vector elements by replacing old ones                              |
-| **push_back()** | It pushes the elements into the vector form the back                                           |
-| **pop_back()**  | It removes elements from a vector from the back                                                |
-| **insert()**    | It inserts new elements before the element at specified position                               |
-| **erase()**     | It removes elements from the specified position or specified range                             |
-| **swap()**      | It is used to swap the content of one vector with another vector of same type, size may differ |
-| **clear()**     | It is used to remove all the elements of the vector container                                  |
+| Function                                                                                        | Work of the function                                                                                                      |
+|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| **assign()**  <br>  `v.assign(n, x)`                                                            | It assigns new value to the vector elements by replacing old ones.  <br>  More precisely, the first n elements becomes x. |
+| **push_back()**  <br>  `v.push_back(x)`                                                         | It pushes the elements (x) into the vector form the back                                                                  |
+| **pop_back()**  <br>  `v.pop_back()`                                                            | It removes elements from a vector from the back                                                                           |
+| **insert()**  <br>  `v.insert(iterator position, x)`                                            | It inserts new elements before the element at specified position                                                          |
+| **erase()**  <br>  `v.erase(iterator position)`  <br>  `v.erase(iterator first, iterator last)` | It removes elements from the specified position or specified range                                                        |
+| **swap()**  <br>  `v1.swap(v2)`                                                                 | It is used to swap the content of one vector with another vector of same type, size may differ                            |
+| **clear()**  <br>  `v.clear()`                                                                  | It is used to remove all the elements of the vector container                                                             |
 
 ***
 
