@@ -172,7 +172,46 @@ The often used operations in set are :
     11 45 
     ```
     This is how you can erase a constant value from the set.
-    - using iterator
+    - **Single Element using iterator :** We can also erase an element from the set using iterators. To do that we need to declare an iterator and then pass that iterator in the erase function which will cause deletation of that perticuler element. Lets see the code for better understanding : 
+    ```cpp
+    #include <iostream> 
+    #include <set> 
+    
+    using namespace std; 
+    
+    int main(){
+    
+        set < int > MySet; // Declaring MySet
+        set < int >::iterator it; // Declaring Iterator for MySet
+    
+        MySet.insert(45); // Inserting 45
+        MySet.insert(23); // Inserting 23
+        MySet.insert(11); // Inserting 11
+        MySet.insert(45); 
+        // 45 is already in the set so nothing happens
+        // So, Now the set should be : 11 , 23 , 45
+    
+        it = MySet.find(23); // This will get the pointer to 23
+        MySet.erase(it); // This will delete the pointed element which is 23
+    
+        cout << "The Elements of the set are : " << endl;
+    
+        for( auto an_element : MySet ) // Taking elements from MySet to an_element ome by one
+        {
+            // Here an_element is a member of MySet
+            cout << an_element << " ";
+        } 
+    
+        cout << endl ;
+    
+        return 0;
+    }
+    ```
+    **OUTPUT :**
+    ```
+    The Elements of the set are : 
+    11 45 
+    ```
     - Erasing a range of number by iterator
 6. **SIZE :**
 7. **FIND AND COUNT :**
