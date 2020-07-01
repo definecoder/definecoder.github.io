@@ -307,12 +307,12 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 
 ### Important Iterator Functions
 
-| Function                       | Work of the function                                                                                                    |
-|--------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| **begin()**  <br>  v.begin()   | Returns an iterator pointing to the first element of the vector                                                         |
-| **end()**  <br>  v.end()       | Returns an iterator pointing to the theoretical element that follows the last element in a vector                       |
-| **rbegin()**  <br>  v.rbegin() | Returns a reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first. |
-| **rend()**  <br>  v.rend()     | Returns a reverse iterator pointing to the first element in the vector (reverse end).                                   |
+| Function                         | Work of the function                                                                                                    |
+|----------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| **begin()**  <br>  `v.begin()`   | Returns an iterator pointing to the first element of the vector                                                         |
+| **end()**  <br>  `v.end()`       | Returns an iterator pointing to the theoretical element that follows the last element in a vector                       |
+| **rbegin()**  <br>  `v.rbegin()` | Returns a reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first. |
+| **rend()**  <br>  `v.rend()`     | Returns a reverse iterator pointing to the first element in the vector (reverse end).                                   |
 
 ***
 
