@@ -33,6 +33,7 @@ The often used operations in set are :
 
 ## Implementation of the basic operations in set
 1. **INSERT :** Insertion is a very basic operation of set. Using this operation you can insert a new element into your set. But remember insersion will add a new element if that element was absent there before because set do not allows same element's occurance twice. So lets see the implementation : 
+
     ```cpp
     #include <iostream> 
     #include <set> 
@@ -54,15 +55,18 @@ The often used operations in set are :
     }
     ```
     Here you can see when we tried to insert 45 for the second time it was not inserted into the set. You can also insert variables which are taken from the user.   
-2. **ITERATOR :**  Iterators are used to point out an element in the set as well as any other container in STL. [You can check this link to know more about iterators](https://definecoder.github.io/STL/iterator). Iterators are very important to access any element in the set. Lets see the list of the iterators for set and the code:
-   |                Function                 |                     Work of the function                      |
+2. **ITERATOR :**  Iterators are used to point out an element in the set as well as any other container in STL. [You can check this link to know more about iterators](https://definecoder.github.io/STL/iterator). Iterators are very important to access any element in the set. Lets see the list of the iterators for set and the code: 
+
+    |                Function                 |                     Work of the function                     |
     |:--------------------------------------:|:-------------------------------------------------------------:|
     |     begin() <br> **MySet.begin()**     |   returns iterator to the **begin** of the set                |
     |       end() <br> **MySet.end()**       |    returns iterator to the **end** of the set                 |
     | advance() <br> **MySet.advance(it,x)** | _increments_ the position of the **it** by **x**              |
     |    prev() <br> **MySet.prev(it,x)**    | returns _decrement_ of the position of the **it** by **x**    |
-    |    next() <br> **MySet.next(it,x)**    |    returns _increment_ of the position of the **it** by **x** |
+    |    next() <br> **MySet.next(it,x)**    |    returns _increment_ of the position of the **it** by **x** |   
+    
     **Implementation :**
+    
     ```cpp
     #include <iostream> 
     #include <set> 
@@ -120,8 +124,23 @@ The often used operations in set are :
         return 0;
     }
     ```
+    
+    **OUTPUT :**
+    
+    ```cpp
+    The Elements of the set are : 
+    11 17 23 45 
+
+    value of MySet.begin() is : 11
+    value of [MySet.end() - 1] is : 45
+    value of advance(MySet.begin(),2) is : 23
+    value of next(MySet.begin(),3) is : 45
+    value of prev(MySet.end(),4) is : 11
+    ```
+
 3. **PRINTING A SET :** Printing of a set can be done in two ways. First one is using iterator and the second one is using C++11 short cut feature. We will include both here. Lets see: 
-    - _**Using Iterator**_ : As you know iterator is a poiunter for the STL datatype or containers, It is very useful to access the elements in a set. First of all you need to declare an iterator of the type of the set that you want to work with.  Then you have to iterate through the set using that iterator that you declared. Lest see the code for better understanding.
+    - _**Using Iterator**_ : As you know iterator is a poiunter for the STL datatype or containers, It is very useful to access the elements in a set. First of all you need to declare an iterator of the type of the set that you want to work with.  Then you have to iterate through the set using that iterator that you declared. Lest see the code for better understanding. 
+    
     ```cpp
     #include <iostream> 
     #include <set> 
@@ -152,15 +171,19 @@ The often used operations in set are :
         cout << endl ;
     
         return 0;
-    }
+    } 
     ```
+    
     **OUTPUT :**
-    ```
+    
+    ```cpp
     The Elements of the set are : 
     11 23 45 
     ```
+    
     So, You can print or access the elemets of a set using iterator. 
-    - _**Special Format of C++11**_ : This mathod is very easy to use and I prefer to use this type. Because, almost all the datatypes or STL containers support this type of iteration or traversal through the set or any container. Lets see the code to see the implementation :
+    - _**Special Format of C++11**_ : This mathod is very easy to use and I prefer to use this type. Because, almost all the datatypes or STL containers support this type of iteration or traversal through the set or any container. Lets see the code to see the implementation : 
+    
     ```cpp
     #include <iostream> 
     #include <set> 
@@ -190,14 +213,18 @@ The often used operations in set are :
     
         return 0;
     }
-    ```
-    **OUTPUT :**
-    ```
+    ``` 
+    
+    **OUTPUT :** 
+    
+    ```cpp
     The Elements of the set are : 
     11 23 45 
-    ```
-    I prefer to use this format because it is simple and easy to use. **BUT REMEMBER THIS CAN ONLY BE USED IN C++11 OR HIGHER VERSION OF CPP** .
+    ``` 
+    
+    I prefer to use this format because it is simple and easy to use. **BUT REMEMBER THIS CAN ONLY BE USED IN C++11 OR HIGHER VERSION OF CPP** . 
     - **User-defined function to print a set :** Now we will write an user-defined function which will print a set on its own. As a perameter it will take the set (call by value). As it will sent a copy of the set,  it won't do any change to the original set in the main function. Lets see the function's implementation: 
+    
     ```cpp
     void print_set (set < int > temp){
     for( auto an_element : temp ) 
@@ -227,7 +254,16 @@ The often used operations in set are :
         return 0;
     }
     ```
+        
+    **OUTPUT :** 
+    
+    ```cpp
+    The Elements of the set are : 
+    11 23 45 
+    ``` 
+    
 4. **FIND :** This function is used to search an element from the set. It returns an iterator which points to the element in the set. If the element is not present in the set it will return the ending positon (` which is called std::end() `) of the set. You can also find the distance of the element using `std::distance(start_iterator,ending_iterator)` function. So, Lets see the implementation of the concepts mentioned above :
+
     ```cpp
     void print_set (set < int > temp){
     for( auto an_element : temp ) 
@@ -270,7 +306,9 @@ The often used operations in set are :
         return 0;
     }
     ```
+    
     **OUTPUT :**
+    
     ```cpp
     The Elements of the set are : 
     11 17 23 45 
@@ -278,8 +316,10 @@ The often used operations in set are :
     23 is present in index no: 2
     25 is not present in the set
     ```
+    
 5. **ERASE :** This function is used to erase one perticuler element or some elements in a range in the set. So, There are **3** types of the erase function. I am includeing the codes for the **C++11**. [To see the codes for C++98 click on this link.](http://www.cplusplus.com/reference/set/set/erase/). Lets continue with the codes for C++11 and above :
     - **Using constant value :** You can erase a constant value from the set using **`erase (const value_type& val);`** See the code below for better understanding : 
+    
     ```cpp
     #include <iostream> 
     #include <set> 
@@ -312,13 +352,17 @@ The often used operations in set are :
         return 0;
     }
     ```
+    
     **OUTPUT :**
-    ```
+    
+    ```cpp
     The Elements of the set are : 
     11 45 
     ```
+    
     This is how you can erase a constant value from the set.
     - **Single Element using iterator :** We can also erase an element from the set using iterators. To do that we need to declare an iterator and then pass that iterator in the erase function which will cause deletation of that perticuler element. Lets see the code for better understanding : 
+    
     ```cpp
     #include <iostream> 
     #include <set> 
@@ -353,12 +397,16 @@ The often used operations in set are :
         return 0;
     }
     ```
+    
     **OUTPUT :**
+    
     ```
     The Elements of the set are : 
     11 45 
     ```
+    
     - **Erasing a range of number by iterator :** You can even erase a range of numbers from set using iterator. To do that you need to pass two iterator. One is the starting iterator and another one is the ending iterator. This two iterator tells erase function the starting and ending position of the erase operation. Lets see the code for implementation.
+    
     ```cpp
     set < int > MySet; // Declaring MySet
     set < int >::iterator it1, it2; 
@@ -390,12 +438,16 @@ The often used operations in set are :
 
     cout << endl ;
     ```
+    
     **OUTPUT :**
+    
     ```
     The Elements of the set are : 
     11 94 
     ```
+    
 6. **SIZE :** This is very basic function for all the datatypes and containers in STL. It will return how many elements are there in the set. Lets see the code for the implementation :
+    
     ```cpp
     set < int > MySet; // Declaring MySet
     
@@ -410,11 +462,15 @@ The often used operations in set are :
 
     cout << "The size of MySet is :: " << MySet.size() << endl;
     ```
+    
     **OUTPUT :**
+    
     ```
     The size of MySet is :: 5
     ```
+
 7. **COUNT :** This returns the number of occurance of a perticuler element in a set. As we know default set does not allows the occurance of the same element more than once, so the count will return 1 or 0 only. But in case of _**multiset**_ ( which we will discuss later) count will return how many times you insert a perticuler element into the set. Lets now see the implementation of std::count() in the standard set : 
+   
    ```cpp
     set < int > MySet; // Declaring MySet
     
@@ -429,11 +485,15 @@ The often used operations in set are :
 
     cout << "45 is present in the set " << MySet.count(45) << " times" << endl;
     ```
-    **OUTPUT :**
-    ```
+   
+   **OUTPUT :**
+   
+   ```
     45 is present in the set 1 times
     ``` 
+
 8. **SWAP :** Swap is a very simple function. It swaps the elements between two sets. Lets see the code to see the implementation : 
+    
     ```cpp
     //Function to print set
     void print_set (set < int > temp){
@@ -480,7 +540,9 @@ The often used operations in set are :
         return 0;
     }
     ```
+    
     **OUTPUT :**
+    
     ```cpp
     Before swapping --> 
     setA :: 1 2 3 
@@ -490,4 +552,5 @@ The often used operations in set are :
     setA :: 10 20 30 40 
     setB :: 1 2 3 
     ```
+
 8. **UPPER AND LOWER :** 
