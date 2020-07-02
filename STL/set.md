@@ -212,7 +212,38 @@ The often used operations in set are :
     The Elements of the set are : 
     11 45 
     ```
-    - Erasing a range of number by iterator
+    - **Erasing a range of number by iterator :** You can even erase a range of numbers from set using iterator. To do that you need to pass two iterator. One is the starting iterator and another one is the ending iterator. This two iterator tells erase function the starting and ending position of the erase operation. Lets see the code for implementation.
+    ```cpp
+    set < int > MySet; // Declaring MySet
+    set < int >::iterator it1, it2; 
+    // Declaring Iterator for starting and ending position of erase function
+
+    MySet.insert(45); // Inserting 45
+    MySet.insert(23); // Inserting 23
+    MySet.insert(11); // Inserting 11
+    MySet.insert(17); // Inserting 17
+    MySet.insert(94); // Inserting 94
+    MySet.insert(45); 
+    // 45 is already in the set so nothing happens
+    // So, Now the set should be : 11 , 17 , 23 , 45 , 94
+
+    it1 = MySet.find(17); // This will get the starting pointer to 17
+    it2 = MySet.find(45); // This will get the ending pointer to 45
+    it2++; // always remember to do 1 element increment for the ending iterator
+    //because it will remove all elements before it2 not the one that is in it2
+    
+    MySet.erase(it1,it2); // This will delete 17 23 45 from the set
+
+    cout << "The Elements of the set are : " << endl;
+
+    for( auto an_element : MySet ) // Taking elements from MySet to an_element ome by one
+    {
+        // Here an_element is a member of MySet
+        cout << an_element << " ";
+    } 
+
+    cout << endl ;
+    ```
 6. **SIZE :**
 7. **FIND AND COUNT :**
 8. **SWAP :**
