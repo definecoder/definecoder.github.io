@@ -24,9 +24,10 @@ The often used operations in set are :
 - Insert
 - Iterator
 - Printing a set
+- Find
 - Erase
 - Size
-- Find and Count
+- Count
 - Swap
 - Upper and Lower Bound
 
