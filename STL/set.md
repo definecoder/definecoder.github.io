@@ -53,7 +53,72 @@ The often used operations in set are :
     }
     ```
     Here you can see when we tried to insert 45 for the second time it was not inserted into the set. You can also insert variables which are taken from the user.   
-2. **ITERATOR :**  
+2. **ITERATOR :**  Iterators are used to point out an element in the set as well as any other container in STL. [You can check this link to know more about iterators](https://definecoder.github.io/STL/iterator). Iterators are very important to access any element in the set. Lets see the list of the iterators for set and the code:
+   |                Function                 |                     Work of the function                      |
+    |:--------------------------------------:|:-------------------------------------------------------------:|
+    |     begin() <br> **MySet.begin()**     |   returns iterator to the **begin** of the set                |
+    |       end() <br> **MySet.end()**       |    returns iterator to the **end** of the set                 |
+    | advance() <br> **MySet.advance(it,x)** | _increments_ the position of the **it** by **x**              |
+    |    prev() <br> **MySet.prev(it,x)**    | returns _decrement_ of the position of the **it** by **x**    |
+    |    next() <br> **MySet.next(it,x)**    |    returns _increment_ of the position of the **it** by **x** |
+    **Implementation :**
+    ```cpp
+    #include <iostream> 
+    #include <set> 
+    #include <iterator> 
+    // remember to include the header of iterator when you will use these functions
+
+    using namespace std; 
+    
+    void print_set (set < int > temp){
+    for( auto an_element : temp ) 
+    // Taking elements from temp set to an_element one by one
+    {
+        // Here an_element is a member of temp set
+        cout << an_element << " ";
+    } 
+    cout << endl;
+    }
+    
+    int main(){
+    
+        set < int > MySet; // Declaring MySet
+        set < int >::iterator it; // Declaring an iterator of integer set
+    
+        MySet.insert(45); // Inserting 45
+        MySet.insert(23); // Inserting 23
+        MySet.insert(11); // Inserting 11
+        MySet.insert(17); // Inserting 17
+        MySet.insert(45); 
+        // 45 is already in the set so nothing happens
+        // So, Now the set should be : 11 , 17 , 23 , 45
+        
+        cout << "The Elements of the set are : " << endl;
+        print_set(MySet); // Printing MySet (will be disscussed below)
+        cout << endl;
+    
+        it = MySet.begin();
+        cout << "value of MySet.begin() is : " << *it << endl;
+        
+        it = MySet.end();
+        it--; // decrementing it because end pointer does not contain any value
+        cout << "value of [MySet.end() - 1] is : " << *it << endl;
+    
+        it = MySet.begin();
+        advance(it,2);
+        cout << "value of advance(MySet.begin(),2) is : " << *it << endl;
+    
+        it = MySet.begin();
+        it = next(it,3);
+        cout << "value of next(MySet.begin(),3) is : " << *it << endl;
+    
+        it = MySet.end();
+        it = prev(it,4);
+        cout << "value of prev(MySet.end(),4) is : " << *it << endl;
+    
+        return 0;
+    }
+    ```
 3. **PRINTING A SET :** Printing of a set can be done in two ways. First one is using iterator and the second one is using C++11 short cut feature. We will include both here. Lets see: 
     - _**Using Iterator**_ : As you know iterator is a poiunter for the STL datatype or containers, It is very useful to access the elements in a set. First of all you need to declare an iterator of the type of the set that you want to work with.  Then you have to iterate through the set using that iterator that you declared. Lest see the code for better understanding.
     ```cpp
