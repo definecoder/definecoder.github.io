@@ -125,6 +125,19 @@ The often used operations in set are :
     }
     ```
     
+    **OUTPUT :**
+    
+    ```cpp
+    The Elements of the set are : 
+    11 17 23 45 
+
+    value of MySet.begin() is : 11
+    value of [MySet.end() - 1] is : 45
+    value of advance(MySet.begin(),2) is : 23
+    value of next(MySet.begin(),3) is : 45
+    value of prev(MySet.end(),4) is : 11
+    ```
+
 3. **PRINTING A SET :** Printing of a set can be done in two ways. First one is using iterator and the second one is using C++11 short cut feature. We will include both here. Lets see: 
     - _**Using Iterator**_ : As you know iterator is a poiunter for the STL datatype or containers, It is very useful to access the elements in a set. First of all you need to declare an iterator of the type of the set that you want to work with.  Then you have to iterate through the set using that iterator that you declared. Lest see the code for better understanding. 
     
