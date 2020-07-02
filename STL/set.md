@@ -161,7 +161,57 @@ The often used operations in set are :
         return 0;
     }
     ```
-4. **FIND :**
+4. **FIND :** This function is used to search an element from the set. It returns an iterator which points to the element in the set. If the element is not present in the set it will return the ending positon (` which is called std::end() `) of the set. You can also find the distance of the element using `std::distance(start_iterator,ending_iterator)` function. So, Lets see the implementation of the concepts mentioned above :
+    ```cpp
+    void print_set (set < int > temp){
+    for( auto an_element : temp ) 
+    // Taking elements from temp set to an_element one by one
+    {
+        // Here an_element is a member of temp set
+        cout << an_element << " ";
+    } 
+    cout << endl;
+    }
+    
+    int main(){
+    
+        set < int > MySet; // Declaring MySet
+        set < int >::iterator it; // Declaring an iterator of integer set
+    
+        MySet.insert(45); // Inserting 45
+        MySet.insert(23); // Inserting 23
+        MySet.insert(11); // Inserting 11
+        MySet.insert(17); // Inserting 17
+        MySet.insert(45); 
+        // 45 is already in the set so nothing happens
+        // So, Now the set should be : 11 , 17 , 23 , 45
+        
+        cout << "The Elements of the set are : " << endl;
+        print_set(MySet); // Printing MySet
+        cout << endl;
+    
+        it = MySet.find(23); // it will now point to 23 in the set
+        cout << *it << " is present in index no: " << distance( MySet.begin() , it ) << endl;
+        // You can see the value of it by using *it (This is also known as dereferencing)
+        // Here distance functions returns the distance between two iterators 
+        
+        it = MySet.find(25); // it will now point to the end of the set as it is absent in the set
+        if(it == MySet.end()) {
+            // As 25 is not present it will point to MySet.end()
+            cout << "25 is not present in the set" << endl;
+        }
+    
+        return 0;
+    }
+    ```
+    **OUTPUT :**
+    ```cpp
+    The Elements of the set are : 
+    11 17 23 45 
+    
+    23 is present in index no: 2
+    25 is not present in the set
+    ```
 5. **ERASE :** This function is used to erase one perticuler element or some elements in a range in the set. So, There are **3** types of the erase function. I am includeing the codes for the **C++11**. [To see the codes for C++98 click on this link.](http://www.cplusplus.com/reference/set/set/erase/). Lets continue with the codes for C++11 and above :
     - **Using constant value :** You can erase a constant value from the set using **`erase (const value_type& val);`** See the code below for better understanding : 
     ```cpp
