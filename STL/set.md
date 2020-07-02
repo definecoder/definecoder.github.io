@@ -249,7 +249,25 @@ The often used operations in set are :
     The Elements of the set are : 
     11 94 
     ```
-6. **SIZE :**
+6. **SIZE :** This is very basic function for all the datatypes and containers in STL. It will return how many elements are there in the set. Lets see the code for the implementation :
+    ```cpp
+    set < int > MySet; // Declaring MySet
+    
+    MySet.insert(45); // Inserting 45
+    MySet.insert(23); // Inserting 23
+    MySet.insert(11); // Inserting 11
+    MySet.insert(17); // Inserting 17
+    MySet.insert(94); // Inserting 94
+    MySet.insert(45); 
+    // 45 is already in the set so nothing happens
+    // So, Now the set should be : 11 , 17 , 23 , 45 , 94
+
+    cout << "The size of MySet is :: " << MySet.size() << endl;
+    ```
+    **OUTPUT :**
+    ```
+    The size of MySet is :: 5
+    ```
 7. **FIND AND COUNT :**
 8. **SWAP :**
 8. **UPPER AND LOWER :** 
