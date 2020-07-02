@@ -54,8 +54,8 @@ The often used operations in set are :
     }
     ```
     Here you can see when we tried to insert 45 for the second time it was not inserted into the set. You can also insert variables which are taken from the user.   
-2. **ITERATOR :**  Iterators are used to point out an element in the set as well as any other container in STL. [You can check this link to know more about iterators](https://definecoder.github.io/STL/iterator). Iterators are very important to access any element in the set. Lets see the list of the iterators for set and the code:
-   |                Function                 |                     Work of the function                      |
+2. **ITERATOR :**  Iterators are used to point out an element in the set as well as any other container in STL. [You can check this link to know more about iterators](https://definecoder.github.io/STL/iterator). Iterators are very important to access any element in the set. Lets see the list of the iterators for set and the code: 
+    |                Function                 |                     Work of the function                     |
     |:--------------------------------------:|:-------------------------------------------------------------:|
     |     begin() <br> **MySet.begin()**     |   returns iterator to the **begin** of the set                |
     |       end() <br> **MySet.end()**       |    returns iterator to the **end** of the set                 |
@@ -121,7 +121,7 @@ The often used operations in set are :
     }
     ```
 3. **PRINTING A SET :** Printing of a set can be done in two ways. First one is using iterator and the second one is using C++11 short cut feature. We will include both here. Lets see: 
-    - _**Using Iterator**_ : As you know iterator is a poiunter for the STL datatype or containers, It is very useful to access the elements in a set. First of all you need to declare an iterator of the type of the set that you want to work with.  Then you have to iterate through the set using that iterator that you declared. Lest see the code for better understanding.
+    - _**Using Iterator**_ : As you know iterator is a poiunter for the STL datatype or containers, It is very useful to access the elements in a set. First of all you need to declare an iterator of the type of the set that you want to work with.  Then you have to iterate through the set using that iterator that you declared. Lest see the code for better understanding. 
     ```cpp
     #include <iostream> 
     #include <set> 
@@ -152,15 +152,15 @@ The often used operations in set are :
         cout << endl ;
     
         return 0;
-    }
+    } 
     ```
     **OUTPUT :**
-    ```
+    ```cpp
     The Elements of the set are : 
     11 23 45 
     ```
     So, You can print or access the elemets of a set using iterator. 
-    - _**Special Format of C++11**_ : This mathod is very easy to use and I prefer to use this type. Because, almost all the datatypes or STL containers support this type of iteration or traversal through the set or any container. Lets see the code to see the implementation :
+    - _**Special Format of C++11**_ : This mathod is very easy to use and I prefer to use this type. Because, almost all the datatypes or STL containers support this type of iteration or traversal through the set or any container. Lets see the code to see the implementation : 
     ```cpp
     #include <iostream> 
     #include <set> 
@@ -190,13 +190,13 @@ The often used operations in set are :
     
         return 0;
     }
-    ```
-    **OUTPUT :**
-    ```
+    ``` 
+    **OUTPUT :** 
+    ```cpp
     The Elements of the set are : 
     11 23 45 
-    ```
-    I prefer to use this format because it is simple and easy to use. **BUT REMEMBER THIS CAN ONLY BE USED IN C++11 OR HIGHER VERSION OF CPP** .
+    ``` 
+    I prefer to use this format because it is simple and easy to use. **BUT REMEMBER THIS CAN ONLY BE USED IN C++11 OR HIGHER VERSION OF CPP** . 
     - **User-defined function to print a set :** Now we will write an user-defined function which will print a set on its own. As a perameter it will take the set (call by value). As it will sent a copy of the set,  it won't do any change to the original set in the main function. Lets see the function's implementation: 
     ```cpp
     void print_set (set < int > temp){
