@@ -287,5 +287,61 @@ The often used operations in set are :
     ```
     45 is present in the set 1 times
     ``` 
-8. **SWAP :**
+8. **SWAP :** Swap is a very simple function. It swaps the elements between two sets. Lets see the code to see the implementation : 
+    ```cpp
+    //Function to print set
+    void print_set (set < int > temp){
+        for( auto an_element : temp ) 
+        // Taking elements from temp set to an_element one by one
+        {
+            // Here an_element is a member of temp set
+            cout << an_element << " ";
+        } 
+        cout << endl;
+    }
+    
+    int main(){
+    
+        set < int > setA, setB; // Declaring two sets
+        
+        setA.insert(1); // Inserting 1
+        setA.insert(2); // Inserting 2
+        setA.insert(3); // Inserting 3
+        // So, Now the setB should be : 1 , 2 , 3
+    
+        setB.insert(10); // Inserting 10
+        setB.insert(20); // Inserting 20
+        setB.insert(30); // Inserting 30 
+        setB.insert(40); // Inserting 40 
+        // So, Now the setB should be : 10 , 20 , 30 , 40
+    
+        cout << "Before swapping --> \n";
+        cout << "setA :: ";
+        print_set(setA); // Printing setA
+        
+        cout << "setB :: ";
+        print_set(setB); // Printing setB
+    
+        setA.swap(setB); // SWAPING between setA and setB
+    
+        cout << "\nAfter swapping --> \n";
+        cout << "setA :: ";
+        print_set(setA); // Printing setA
+        
+        cout << "setB :: ";
+        print_set(setB); // Printing setB
+    
+        return 0;
+    }
+    ```
+    **OUTPUT :**
+    ```cpp
+    Before swapping --> 
+    setA :: 1 2 3 
+    setB :: 10 20 30 40 
+    
+    After swapping --> 
+    setA :: 10 20 30 40 
+    setB :: 1 2 3 
+    ```
 8. **UPPER AND LOWER :** 
