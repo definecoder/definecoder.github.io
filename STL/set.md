@@ -268,6 +268,24 @@ The often used operations in set are :
     ```
     The size of MySet is :: 5
     ```
-7. **FIND AND COUNT :**
+7. **COUNT :** This returns the number of occurance of a perticuler element in a set. As we know default set does not allows the occurance of the same element more than once, so the count will return 1 or 0 only. But in case of _**multiset**_ ( which we will discuss later) count will return how many times you insert a perticuler element into the set. Lets now see the implementation of std::count() in the standard set : 
+   ```cpp
+    set < int > MySet; // Declaring MySet
+    
+    MySet.insert(45); // Inserting 45
+    MySet.insert(23); // Inserting 23
+    MySet.insert(11); // Inserting 11
+    MySet.insert(17); // Inserting 17
+    MySet.insert(94); // Inserting 94
+    MySet.insert(45); 
+    // 45 is already in the set so nothing happens
+    // So, Now the set should be : 11 , 17 , 23 , 45 , 94
+
+    cout << "45 is present in the set " << MySet.count(45) << " times" << endl;
+    ```
+    **OUTPUT :**
+    ```
+    45 is present in the set 1 times
+    ``` 
 8. **SWAP :**
 8. **UPPER AND LOWER :** 
