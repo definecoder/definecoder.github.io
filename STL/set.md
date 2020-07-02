@@ -244,6 +244,11 @@ The often used operations in set are :
 
     cout << endl ;
     ```
+    **OUTPUT :**
+    ```
+    The Elements of the set are : 
+    11 94 
+    ```
 6. **SIZE :**
 7. **FIND AND COUNT :**
 8. **SWAP :**
