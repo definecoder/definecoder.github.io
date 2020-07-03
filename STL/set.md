@@ -553,4 +553,112 @@ The often used operations in set are :
     setB :: 1 2 3 
     ```
 
-8. **UPPER AND LOWER :** 
+8. **UPPER AND LOWER BOUND:** 
+Upper and lower_bound is very important function for certain cases. Using find function you can search for an element if that element is not present in the set then std::find won't be able to find that element. But using Upper and lower bound you can find element which is strictly bigger (smallest number such that this number is bigger than a certain number ~ see the code for better understanding) than a certain number. Lets see the difference between **Upper_bound** and **lower_bound** :
+    - **UPPER BOUND :** Suppose you are given a set of integers, `S = { 12, 17, 27, 35, 47, 58, 93 }` Here if you want to know the **upper bound of 24**, it will be **27** which means _**`upper_bound(x) will return an iterator to the first element which is greater than x`**_. But in case of upper bound in the example mentioned above the **uppper_bound(35)** will be **47** because 47 is the first integer in the set which is greater than 35 (_not 35 as it is equal_). So, lets see the code for implementation :
+    
+    ```cpp
+    void print_set (set < int > temp){
+    for( auto an_element : temp ) 
+    // Taking elements from temp set to an_element one by one
+    {
+        // Here an_element is a member of temp set
+        cout << an_element << " ";
+    } 
+    cout << endl;
+    }
+    
+    int main(){
+    
+        set < int > MySet; // Declaring MySet
+        set < int >::iterator it; // Declaring an iterator of integer set
+    
+        MySet.insert(12); 
+        MySet.insert(17); 
+        MySet.insert(27); 
+        MySet.insert(35); 
+        MySet.insert(47); 
+        MySet.insert(58); 
+        MySet.insert(93); 
+        // So, Now the set should be : 12 , 17 , 27 , 35, 47, 58, 93
+        
+        cout << "The Elements of the set are : " << endl;
+        print_set(MySet); // Printing MySet
+        cout << endl;
+    
+        it = MySet.upper_bound(24);
+        cout << "value of MySet.upper_bound(24) is : " << *it << endl;
+        // *it will be 27 because 27 is the first number greater than 24
+    
+        it = MySet.upper_bound(35);
+        cout << "value of MySet.upper_bound(35) is : " << *it << endl;    
+        // *it will be 47 because 47 is the first number greater than 35
+        // *it is not 35 because they are equal... 
+    
+        return 0;
+    }
+    ```
+    
+    **output :**
+    
+    ```cpp
+    The Elements of the set are : 
+    12 17 27 35 47 58 93 
+    
+    value of MySet.upper_bound(24) is : 27
+    value of MySet.upper_bound(35) is : 47
+    ```
+    - **LOWER BOUND :** Suppose you are given a set of integers as like before, `S = { 12, 17, 27, 35, 47, 58, 93 }` Here if you want to know the **lower bound of 24**, it will be **27** which means _**`lower_bound(x) will return an iterator to the first element which is greater or equal to x`**_. But in case of lower bound in the example mentioned above the **lower_bound(35)** will be **35** because 35 is equal ot the argumant (_as it is equal_). So, lets see the code for implementation :
+    
+    ```cpp
+    void print_set (set < int > temp){
+    for( auto an_element : temp ) 
+    // Taking elements from temp set to an_element one by one
+    {
+        // Here an_element is a member of temp set
+        cout << an_element << " ";
+    } 
+    cout << endl;
+    }
+
+    int main(){
+
+        set < int > MySet; // Declaring MySet
+        set < int >::iterator it; // Declaring an iterator of integer set
+
+        MySet.insert(12); 
+        MySet.insert(17); 
+        MySet.insert(27); 
+        MySet.insert(35); 
+        MySet.insert(47); 
+        MySet.insert(58); 
+        MySet.insert(93); 
+        // So, Now the set should be : 12 , 17 , 27 , 35, 47, 58, 93
+        
+        cout << "The Elements of the set are : " << endl;
+        print_set(MySet); // Printing MySet
+        cout << endl;
+
+        it = MySet.lower_bound(24);
+        cout << "value of MySet.lower_bound(24) is : " << *it << endl;
+        // *it will be 27 because 27 is the first number greater or equal to 24
+
+        it = MySet.lower_bound(35);
+        cout << "value of MySet.lower_bound(35) is : " << *it << endl;    
+        // *it will be 35 because 35 is equal to the argumant
+        // *it is will be 47 in case of upper bound
+
+        return 0;
+    }
+    ```
+    
+    **output :**
+    
+    ```cpp
+    The Elements of the set are : 
+    12 17 27 35 47 58 93 
+
+    value of MySet.lower_bound(24) is : 27
+    value of MySet.lower_bound(35) is : 35
+    ```
+    Hope that you are clear with the basic functons of a set.
