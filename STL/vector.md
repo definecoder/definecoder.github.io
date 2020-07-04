@@ -314,6 +314,48 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 | **rbegin()**  <br>  `v.rbegin()` | Returns a reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first. |
 | **rend()**  <br>  `v.rend()`     | Returns a reverse iterator pointing to the first element in the vector (reverse end).                                   |
 
+Let's see their uses through code:-
+
+```cpp
+    vector < int > v {1, 2, 3, 4, 5};
+    
+    cout << "Using begin() & end(): ";
+    for(auto i = v.begin(); i != v.end(); i++) {
+        cout << *i << " ";
+    }
+    cout << endl;
+    
+    cout << "Using rbegin() & rend(): ";
+    for(auto i = v.rbegin(); i != v.rend(); i++) {
+        cout << *i << " ";
+    }
+    cout << endl;
+```
+
+    Output:
+    Using begin() & end(): 1 2 3 4 5
+    Using rbegin() & rend(): 5 4 3 2 1
+
+In this code, `i` is used as an iterator. We have used auto to keep it simple. If we do not want to use auto, we have to declare  an iterator to vector like this - `vector < int >::iterator i` and a reverse iterator like this `vector < int >::reverse_iterator j;`. The we can use `i` in the first loop and `j` in the second loop.. Then the code will be like :-
+
+```cpp
+    vector < int > v {1, 2, 3, 4, 5};
+    vector < int >::iterator i;
+    vector < int >::reverse_iterator j;
+    
+    cout << "Using begin() & end(): ";
+    for(i = v.begin(); i != v.end(); i++) {
+        cout << *i << " ";
+    }
+    cout << endl;
+    
+    cout << "Using rbegin() & rend(): ";
+    for(j = v.rbegin(); j != v.rend(); j++) {
+        cout << *j << " ";
+    }
+    cout << endl;
+```
+
 ***
 
 ### Important Capacity Functions
