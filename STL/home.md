@@ -16,7 +16,7 @@ STL is a very powefull tool for **competitive programming**. It saves a lot of t
   * Multiset
   * Unordered Set
   * Unordered Multiset
-- Map
+- [Map](https://definecoder.github.io/STL/map)
   * Multimap
   * Unordered Map
   * Unordered Multimap
