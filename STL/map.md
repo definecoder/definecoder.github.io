@@ -58,5 +58,36 @@ Now if we analyze the output we would notice that `our map is not printed in the
 |Shanto|29|
 
 Now what will happen if we add same key value? Lets code:
+```cpp
+.
+.
+M["Shanto"] = 30;
+// now print all
+```
+```
+output: 
+Mehraj 42
+Mugdha 1
+Shanto 30
+```
+As you see the mapped value of *Shanto* is updated but it didn't create the same key value again!
+
+Let's see another example, suppose we're given a sequence of numbers and we need to find the occurence of every distinct number in the sequence. For example, 1, 4, 1, 3. 1, 3, 4 is given. Here occurence of 1 is 3, 3 is 2 and 4 is also 2. We can solve this problem very easily by using map.
+```cpp
+int main(){
+    map <int, int> M;
+    int n;
+    cin >> n;
+    for(int i = 0; i < n; i++){
+        int x;
+        cin >> x;
+        M[x]++;
+    }
+    for(auto x:M){
+        cout << "occurence of "<< x.first << "is: "<< x.second << endl;
+    }
+}
+```
+See this code and try to understand what happened here by yourself!
 
 
