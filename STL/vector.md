@@ -2,9 +2,7 @@
 
 ## Introduction
 
-Vector is one of the most powerful Data Type in ***C++ programming language*** and very much helpful for competitive programmers. The concept of vector is almost same as C programming language’s ***Array***. However, in C++, we call the vector ***“A Container”***. A container can contain everything such as *<ins>`integers, doubles, characters, bools, strings, structures`</inS>* and a vector can contain *<ins>`some vectors`</ins>* too. But the most important feature of vector is –***“Its memory is allocated dynamically.”*** We can change its length at any time and you can perform many operations that is not possible for C language’s array. We will see and learn all of these things gradually in a proper way.
-
-<br/>
+Vector is one of the most powerful Data Type in ***C++ programming language*** and very much helpful for competitive programmers. The concept of vector is almost same as C programming language’s ***Array***. However, in C++, we call the vector ***“A Container”***. As a container, a vector can contain everything such as *<ins>`integers, doubles, characters, bools, strings, structures`</inS>* and a vector can contain *<ins>`some vectors`</ins>* too. But the most important feature of vector is –***“Its memory is allocated dynamically.”***  We can change its length at any time and you can perform many operations that is not possible for C language’s array. We will see and learn all of these things gradually in a proper way.
 
 ***
 
@@ -39,6 +37,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
                 int n = 7;
                 vector < int > v(n);
                 
+                // This sets all elements to 0 automatically
                 // Print the vector just to be made sure
                 cout << "v = ";
                 for(int x : v) {
@@ -46,6 +45,9 @@ We can declare a vector in several ways. Let us see some of them at a glance and
                 }
                 cout << endl;
             ```
+            
+                Output:
+                0 0 0 0 0 0 0
     
             - This sets all elements to 0 automatically.
             
@@ -61,7 +63,11 @@ We can declare a vector in several ways. Let us see some of them at a glance and
                     cout << x << " ";
                 cout << endl;
             ```
-        
+            
+                Output:
+                10 10 10 10 10 10 10
+
+
 - Type-03 - ***Initializing like arrays***
     - We can do it in 2 different styles
         - Style-A
@@ -77,6 +83,10 @@ We can declare a vector in several ways. Let us see some of them at a glance and
                 cout << endl;
             ```
             
+                Output:
+                definecoder
+
+
         - Style-B - We can use an equal sign too
             
             ```cpp
@@ -88,7 +98,11 @@ We can declare a vector in several ways. Let us see some of them at a glance and
                     cout << x;
                 cout << endl;
             ```
-        
+            
+                Output:
+                definecoder
+
+
 - Type-04 - ***Initializing from an array***
     ```cpp
         int arr[] = {10, 20, 30};
@@ -101,7 +115,11 @@ We can declare a vector in several ways. Let us see some of them at a glance and
             cout << x << " ";
         cout << endl;
     ```
-        
+    
+        Output:
+        10 20 30
+
+
 - Type-05 - ***Initializing from another vector***
     ```cpp
         vector < int > motherVector {8, 4, 2, 0, 1};
@@ -113,6 +131,10 @@ We can declare a vector in several ways. Let us see some of them at a glance and
             cout << x << " ";
         cout << endl;
     ```
+    
+        Output:
+        8 4 2 0 1
+
 
 ***
 
@@ -121,7 +143,8 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 - We can push elements into it using `push_back()` function. The syntax is like `VariableName.push_back(value)`. We can push as much elements as we need (but within the range).
 
     ```cpp
-        vector < char > v, v.push_back('d'), v.push_back('e'), v.push_back('f');
+        vector < char > v;
+        v.push_back('d'), v.push_back('e'), v.push_back('f');
         v.push_back('i'), v.push_back('n'), v.push_back('e');
         //And so on...
     
@@ -132,6 +155,10 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         }
         cout << endl;
     ```
+    
+        Output:
+        define
+
 
 - The most important thing, when we declare an empty vector, is to have in mind that after declaration, the size of the vector is 0. Then when we push elements one by one, the size of the vector gradually increases. For example, in the previous code - **`"after initialization, the size was 0. Then we pushed 6 elements into the vector. Now The size of the vector is 6."`**
 
@@ -139,7 +166,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 
     ```cpp
         vector < double > v;
-        cout << "After initialization, size = " << v.size() << endl;
+        cout << "After declaration, size = " << v.size() << endl;
         v.push_back(10.5);
         cout << "After adding first element, size = " << v.size() << endl;
         v.push_back(13.684);
@@ -149,7 +176,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
     ```
 
         Output:
-        After initialization, size = 0
+        After declaration, size = 0
         After adding first element, size = 1
         After adding one more element, size = 2
         After adding one more element, size = 3
@@ -184,7 +211,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         }
     ```
 
-- We will get a **runtime error** as we are accessing a memory we do not have. The question is why? The answer is quite simple - **"An empty vector does not provide any memory for its elements. When we use `push_back()` function to add new elements, it provides memory for the elements."** But if we want to add some memories to our vector we have to use `resize()` function. The syntax is `VariableName.resize(NewSize)`. **Then we can access indexs form 0 to NewSize-1.**
+- We will get a **runtime error** as we are accessing a memory that we do not have. The question is why? The answer is quite simple - **"An empty vector does not provide any memory for its elements. When we use `push_back()` function to add new elements, it provides memory for the elements."** But if we want to add memories for some elements to our vector, we have to use `resize()` function. The syntax is `VariableName.resize(NewSize)`. **Then we can access indexs form 0 to NewSize - 1.**
 - So we have to use `v.Push_back(10), v.push_back(20), v.push_back(30)` in the first one. We can handle the second one like this:
 
     ```cpp
@@ -196,7 +223,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         }
     ```
 
-- Or we can use resize the vector and access indexs from 0 to NewSize-1.
+- Or we can use resize the vector and access indexs from 0 to NewSize - 1.
 
     ```cpp
         vector < int > v;
@@ -236,9 +263,9 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         Output:
         1 2 3 4 5 0 0 0 0 0
 
-- The big question in our mind is **What happens after resize, if the data type is not integer!** The answer is **If the datatype is `int`, `double`, `long int` or number related anything, the value is automatically set to 0. And if the data type is `char` or `string` related something, each index will contain a `NULL` character!**
+- The big question in our mind is **What happens after resize if the data type is not integer!** The answer is **If the datatype is `int`, `double`, `long int` or number related anything, the value is automatically set to 0. And if the data type is `char` or `string` related something, each index will contain a `NULL` character!**
 
-- Now suppose, we have a vector of length 7. We resize if to length 5. Then these 5 elements remains the same. Just those last elements gets deleted.
+- Now suppose, we have a vector of length 7. We resize if to length 5. Then these 5 elements remains the same. Just those last elements get deleted.
 
     ```cpp
         vector < int > v{1, 2, 3, 4, 5, 6, 7};
@@ -255,7 +282,7 @@ We can declare a vector in several ways. Let us see some of them at a glance and
 
 ### What if we want all of the elements of our vector become 0 (for number types) or NULL (for character types) after resize?
 
-- Use `clear()` function before resize. The syntax is `VariableName.clear()`.
+- Use `clear()` function before resize. The syntax of `clear()` function is `VariableName.clear()`.
 
     ```cpp
         vector < int > v{1, 2, 3, 4, 5, 6, 7};
@@ -270,6 +297,71 @@ We can declare a vector in several ways. Let us see some of them at a glance and
         Output:
         0 0 0 0 0 0 0 0 0 0
 
-- **`clear()` function deletes all the elements of the vector and the vector becomes empty.**
+- **`clear()` function deletes all the elements of the vector and the vector becomes empty. And when we resize an empty vector, all indexes will contain 0 (or NULL) by default.**
 
 ***
+
+## The last 4 questions explains how we are going to insert new elements to our vector under different circumstances. Now we will see a list of some functions along with a short description.
+
+***
+
+### Important Iterator Functions
+
+| Function                         | Work of the function                                                                                                    |
+|----------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| **begin()**  <br>  `v.begin()`   | Returns an iterator pointing to the first element of the vector                                                         |
+| **end()**  <br>  `v.end()`       | Returns an iterator pointing to the theoretical element that follows the last element in a vector                       |
+| **rbegin()**  <br>  `v.rbegin()` | Returns a reverse iterator pointing to the last element in the vector (reverse beginning). It moves from last to first. |
+| **rend()**  <br>  `v.rend()`     | Returns a reverse iterator pointing to the first element in the vector (reverse end).                                   |
+
+***
+
+### Important Capacity Functions
+
+| Function                                       | Work of the function                                                                                |
+|------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| **size()**  <br>  `v.size()`                   | Returns the number of elements in the vector                                                        |
+| **max_size()**  <br>  `v.max_size()`           | Returns the maximum number of elements that the vetor can hold                                      |
+| **capacity()**  <br>  `v.capacity`             | Returns the size of the storage space currently allocated to the vector expressed as number         |
+| **resize()**  <br>  `v.resize(n)`              | Resizes the container so that it can contain `'n'` elements                                         |
+| **empty()**  <br>  `v.empty()`                 | Returns whether the container is empty                                                              |
+| **shrink_to_fit()**  <br>  `v.shrink_to_fit()` | Reduces the capacity of the container to fit its size and destroys all elements beyond the capacity |
+| **reserve()**  <br>  `v.reserve(n)`            | Requests that the vector capacity be at least enough to contain `'n'` elements                      |
+
+***
+
+### Element Access Functions
+
+| Function                                 | Work of the function                                                                                   |
+|------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| **reference operator [g]**  <br>  `v[g]` | Returns a reference to the element at position `'g'` in the vector                                     |
+| **at(g)**  <br>  `v.at(g)`               | Returns a reference to the element at position `'g'` in the vector                                     |
+| **front()**  <br>  `v.front()`           | Returns a reference to the first element in the vector                                                 |
+| **back()**  <br>  `v.back()`             | Returns a reference to the last element of the vector                                                  |
+| **data()**  <br>  `v.data()`             | Returns a direct pointer to the memory array used internally by the vector to store its owned elements |
+
+***
+
+### Modifiers
+
+| Function                                                                                        | Work of the function                                                                                                      |
+|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| **assign()**  <br>  `v.assign(n, x)`                                                            | It assigns new value to the vector elements by replacing old ones.  <br>  More precisely, the first n elements becomes x. |
+| **push_back()**  <br>  `v.push_back(x)`                                                         | It pushes the elements (x) into the vector form the back                                                                  |
+| **pop_back()**  <br>  `v.pop_back()`                                                            | It removes elements from a vector from the back                                                                           |
+| **insert()**  <br>  `v.insert(iterator position, x)`                                            | It inserts new elements before the element at specified position                                                          |
+| **erase()**  <br>  `v.erase(iterator position)`  <br>  `v.erase(iterator first, iterator last)` | It removes elements from the specified position or specified range                                                        |
+| **swap()**  <br>  `v1.swap(v2)`                                                                 | It is used to swap the content of one vector with another vector of same type, size may differ                            |
+| **clear()**  <br>  `v.clear()`                                                                  | It is used to remove all the elements of the vector container                                                             |
+
+***
+
+
+
+
+
+
+
+
+
+
