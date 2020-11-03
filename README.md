@@ -10,7 +10,7 @@
 - Dynamic Programming
 - BitSet
 - Greedy
-- Binary Search
+- [Binary Search](https://definecoder.github.io/BinarySearch)
 - Two Pointer
 - Geometry
 - Combinatorics
