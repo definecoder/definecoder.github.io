@@ -52,7 +52,7 @@ Let **A** be an array, which has **n** elements and we want to search for a numb
 The **function** for running Binary Search over a sorted array is given below:
 
 <details>
-  <summary>Function</summary>
+  <summary>Function of Binary Search</summary>
 	
 ```cpp
 
@@ -78,4 +78,71 @@ int BinarySearch ( int DATA[], int LB, int UB, int ITEM )
 ```
 	
 </details>
+
+
+<details>
+  <summary>More about the function of Binary Search</summary>
+	
+In this function - 
+
+```cpp
+
+int DATA[] =   the dataset given to us.
+int LB     =   the lower bound of the range we want to search for.
+int UB     =   the upper bound of the range we want to search for.
+int ITEM   =   the item which we are searching.
+
+```
+
+Suppose, we have a sorted array **DATA[8] = { 10, 20, 20, 20, 30, 30, 40, 50 }**. We would like to search if **40** is present in this array or not. And we want to search in the whole array. In this case, 
+
+```cpp
+
+int LB = 0;
+int UB = 7;
+int ITEM = 40
+
+```
+
+Then we call the function to get the location of the item. 
+
+```cpp
+
+int index = BinarySearch ( DATA[], LB, UB, ITEM );
+if( index == -1 ) std::cout << "Item Not Found" << endl;
+else std::cout << "Item Found at Index " << index << endl;
+
+```
+
+```
+
+Output:
+Item Found at Index 6
+
+```
+
+If we set `ITEM = 25`, the output will be - `Item Not Found`.
+	
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
