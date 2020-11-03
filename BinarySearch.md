@@ -69,10 +69,10 @@ int BinarySearch ( int DATA[], int LB, int UB, int ITEM )
 			BIG = MID + 1;
 		}
 		else {
-			return MID;
+			return MID;	// found the item! So returning its index
 		}
 	}
-	return -1;
+	return -1;	// there is no such item. So returning an impossible index
 }
 
 ```
