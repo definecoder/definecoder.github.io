@@ -108,7 +108,7 @@ Then we call the function to get the location of the item.
 
 ```cpp
 
-int index = BinarySearch ( DATA[], LB, UB, ITEM );
+int index = BinarySearch ( DATA[], 0, 8, 40 );
 if( index == -1 ) std::cout << "Item Not Found" << endl;
 else std::cout << "Item Found at Index " << index << endl;
 
@@ -122,6 +122,23 @@ Item Found at Index 6
 ```
 
 If we set `ITEM = 25`, the output will be - `Item Not Found`.
+
+If we do not want to run Binary Search over the whole array but on a section of the array, we just have to set the boundary. Suppose we want to run over from index 2 to index 5 of the array, then our code will look like -
+
+```cpp
+
+int index = BinarySearch ( DATA[], 2, 5, 40 );
+
+```
+
+```
+
+Output:
+Item Not Found.
+
+```
+
+This is the most simple version of Binary Search. We can also use Binary Search to find some other things too, such as - we can find **Lower Bound** and **Upper Bound** of an item, **smallest element** and **largest element** from a rotated (after sorted) array, we can also solve some other problems like **Max in a hill** or **Min in a canyon**. We will be exploring them in the further part.
 	
 </details>
 
