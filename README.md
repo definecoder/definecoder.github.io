@@ -10,6 +10,7 @@
 - Dynamic Programming
 - BitSet
 - Greedy
+- Binary Search
 - Two Pointer
 - Geometry
 - Combinatorics
