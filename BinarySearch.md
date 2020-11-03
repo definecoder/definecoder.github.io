@@ -62,11 +62,11 @@ int BinarySearch ( int DATA[], int LB, int UB, int ITEM )
 	
 	while( BEG <= END ) {
 		MID = ( int ) ( BEG + END ) / 2;
-		if ( ITEM < DATA[MID] ) {
+		if ( ITEM < DATA[MID] ) {		// ITEM < DATA[MID].	Update END value
 			END  = MID - 1;
 		}
-		else if ( ITEM > DATA[MID] ) {
-			BIG = MID + 1;
+		else if ( ITEM > DATA[MID] ) {		// ITEM > DATA[MID].	Update BEG value
+			BEG = MID + 1;
 		}
 		else {
 			return MID;	// found the item! So returning its index
