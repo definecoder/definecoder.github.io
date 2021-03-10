@@ -54,7 +54,28 @@ The often used operations in set are :
       	return 0;
     }
     ```
-    Here you can see when we tried to insert 45 for the second time it was not inserted into the set. You can also insert variables which are taken from the user.   
+    Here you can see when we tried to insert 45 for the second time it was not inserted into the set. You can also insert variables which are taken from the user. You can do that using a varible. See the code below or better understanding:
+        ```cpp
+    #include <iostream> 
+    #include <set> 
+  
+    using namespace std; 
+
+    int main(){
+   	
+       	set < int > MySet; // Declaring MySet
+        int x; // variable to take input
+        int n; // how many number you want to insert
+        
+       	for(int i = 0 ; i < n ; i++)
+        {
+            cin >> x;
+            Myset.insert(x); // inserting x into the MySet
+        }
+        
+      	return 0;
+    }
+    ```
 2. **ITERATOR :**  Iterators are used to point out an element in the set as well as any other container in STL. [You can check this link to know more about iterators](https://definecoder.github.io/STL/iterator). Iterators are very important to access any element in the set. Lets see the list of the iterators for set and the code: 
 
     |                Function                 |                     Work of the function                     |
@@ -139,7 +160,7 @@ The often used operations in set are :
     ```
 
 3. **PRINTING A SET :** Printing of a set can be done in two ways. First one is using iterator and the second one is using C++11 short cut feature. We will include both here. Lets see: 
-    - _**Using Iterator**_ : As you know iterator is a poiunter for the STL datatype or containers, It is very useful to access the elements in a set. First of all you need to declare an iterator of the type of the set that you want to work with.  Then you have to iterate through the set using that iterator that you declared. Lest see the code for better understanding. 
+    - _**Using Iterator**_ : As you know iterator is a pointer for the STL datatype or containers, It is very useful to access the elements in a set. First of all you need to declare an iterator of the type of the set that you want to work with.  Then you have to iterate through the set using that iterator that you declared. Lest see the code for better understanding. 
     
     ```cpp
     #include <iostream> 
