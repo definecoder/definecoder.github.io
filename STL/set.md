@@ -55,7 +55,7 @@ The often used operations in set are :
     }
     ```
     Here you can see when we tried to insert 45 for the second time it was not inserted into the set. You can also insert variables which are taken from the user. You can do that using a varible. See the code below or better understanding:
-        ```cpp
+    ```cpp
     #include <iostream> 
     #include <set> 
   
